@@ -1,0 +1,30 @@
+.about-nums {
+  display: grid;
+  gap: 20px;
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-laptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    padding: 25px;
+    border: 1px solid $border;
+    border-radius: 15px;
+    @include media-tablet {
+      padding: 35px;
+    }
+  }
+  &__value {
+    margin-bottom: 8px;
+    font-weight: 650;
+    font-size: 65px;
+    @include media-laptop {
+      font-weight: 500;
+      font-size: 70px;
+    }
+  }
+  &__ui-p1 {
+    color: $body-text;
+  }
+}

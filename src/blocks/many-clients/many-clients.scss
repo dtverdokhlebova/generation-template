@@ -1,0 +1,44 @@
+.many-clients {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 45px 0;
+  text-align: center;
+  @include media-tablet {
+    min-height: 460px;
+  }
+  @include media-laptop {
+    min-height: 690px;
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 650;
+    font-size: 22px;
+    line-height: 124.3%;
+    @include media-tablet {
+      font-size: 36px;
+    }
+    @include media-laptop {
+      font-size: 50px;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-42%, -54%);
+    height: 200%;
+    pointer-events: none;
+    @include media-tablet {
+      transform: translate(-50%, -50%);
+    }
+    img {
+      position: relative;
+      max-width: unset;
+      height: 100%;
+    }
+  }
+}

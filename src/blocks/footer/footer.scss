@@ -1,0 +1,220 @@
+.footer {
+  --border-color: #232323;
+
+  font-family: $fontInt;
+  background: $bg;
+  &__logo {
+    display: none;
+    width: 196px;
+    height: 35px;
+    flex-shrink: 0;
+    color: $white;
+    @include media-tablet {
+      display: block;
+    }
+    @include media-laptop {
+      margin-right: auto;
+    }
+  }
+  &__menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $bg-white;
+    @include media-laptop {
+      display: flex;
+      gap: 30px;
+    }
+  }
+  &__item {
+    position: relative;
+    @include media-hover {
+      .footer {
+        &__link {
+          color: $blue;
+          .svg {
+            transform: rotate(180deg);
+          }
+        }
+        &__submenu {
+          transform: none;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 1.2;
+    cursor: pointer;
+    @include media-hover {
+      text-decoration: none;
+      color: $blue;
+    }
+    &--arrow {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      .svg {
+        content: '';
+        width: 11px;
+        height: 7px;
+        transition: transform $transitionDuration;
+      }
+    }
+  }
+  &__submenu {
+    position: absolute;
+    right: -70px;
+    bottom: calc(100% + 20px);
+    width: 435px;
+    margin: 0;
+    padding: 42px 30px;
+    background: $bg;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    opacity: 0;
+    display: block;
+    list-style: none;
+    transform: translateY(15px) scale3d(0.8, 0.8, 1);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    box-shadow: 4px 4px 26px 0 rgb(217 217 217 / 0.05);
+    visibility: hidden;
+    transition: 0.4s;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      left: 0;
+      height: 20px;
+      content: '';
+    }
+  }
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__sublink {
+    font-size: 16px;
+    line-height: 1.4;
+    @include media-hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  &__top {
+    margin-bottom: 35px;
+    @include media-tablet {
+      margin-bottom: 25px;
+      padding: 0 var(--inner-pd);
+    }
+    @include media-laptop {
+      width: calc(100% - 100px);
+      max-width: 1815px;
+      margin: 0 auto 25px;
+      padding-top: 26px;
+      border-top: 1px solid var(--border-color);
+    }
+    .inner {
+      @include media-tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 26px 0 0;
+        border-top: 1px solid var(--border-color);
+      }
+      @include media-laptop {
+        justify-content: stretch;
+        padding: 0 var(--inner-pd);
+        border-top: 0;
+        gap: 70px;
+      }
+    }
+  }
+  &__bot {
+    font-size: 13px;
+    line-height: 1.26;
+    text-align: center;
+    @include media-tablet {
+      padding: 0 var(--inner-pd);
+    }
+    @include media-laptop {
+      width: calc(100% - 100px);
+      max-width: 1815px;
+      margin: 0 auto;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+    }
+    .inner {
+      @include media-tablet {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 30px 0;
+        border-top: 1px solid var(--border-color);
+      }
+      @include media-laptop {
+        padding: 0 var(--inner-pd);
+        border-top: 0;
+      }
+    }
+  }
+  &__copy {
+    color: $grey;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 32px;
+    padding-bottom: 35px;
+    border-top: 1px solid var(--border-color);
+    color: $body-text;
+    @include media-tablet {
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+      margin-top: 0;
+      padding: 0;
+      border-top: 0;
+    }
+  }
+  &--light {
+    --border-color: #EAEAEA;
+
+    background: transparent;
+    .footer {
+      &__logo {
+        color: $main-color;
+      }
+      &__menu {
+        color: $main-color;
+      }
+      &__link {
+        &--arrow {
+          &::after {
+            filter: brightness(0);
+          }
+        }
+      }
+      &__submenu {
+        background: $bg-white;
+        border-color:#EAEAEA;
+      }
+      &__copy,
+      &__links {
+        color: $body-text;
+        @include media-tablet {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

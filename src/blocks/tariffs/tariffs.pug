@@ -1,0 +1,73 @@
+mixin tariffs(data, dataSwitch, mods)
+  -
+    const baseName = 'tariffs'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .tariffs(class=allMods)&attributes(attributes)
+    .swiper
+      .swiper-wrapper
+        each item, index in data.items
+          .tariffs__item.swiper-slide
+            +ui-h4(item.title, 'tariffs, --bold')
+            .tariffs__main
+              if item.descr
+                +ui-p1(item.descr, '--medium')
+              if item.props
+                .tariffs__props
+                  each prop, inpdexProp in item.props
+                    +tariffs__prop(prop.name, `0${inpdexProp+1}`)
+                  if item.more
+                    -for(let i=0; i<2; i++)
+                      +tariffs__prop('item hidden', `0${item.props.length+1+i}`)(style='display: none;' data-tariffs-prop-hidden='')
+                      //- +tariffs__prop('item hidden', `0${item.props.length+1+i}`).block-fade-in(style='display: none;' data-switch-element=`tariffs_${data.idSwitch}_2_${index}`)
+              if item.more
+                .tariffs__more
+                  +ui-p1('Показать еще', '--medium')
+                  +ui-switch-button()(onclick = 'tariffsPropsToggle(this)')
+                  //- +ui-switch({
+                  //-   buttonOnclick: 'uiSwitchButton(this)',
+                  //-   groupName: `tariffs_group_${data.idSwitch}_${index}`,
+                  //-   left: {
+                  //-     id: `tariffs_${data.idSwitch}_1_${index}`,
+                  //-     attributeName: 'data-switch-target',
+                  //-     attributeValue: `tariffs_${data.idSwitch}_1_${index}`,
+                  //-   },
+                  //-   right: {
+                  //-     id: `tariffs_${data.idSwitch}_2_${index}`,
+                  //-     attributeName: 'data-switch-target',
+                  //-     attributeValue: `tariffs_${data.idSwitch}_2_${index}`,
+                  //-   },
+                  //- })
+            .tariffs__bottom
+              .tariffs__price
+                +ui-p1('Цена:', '--medium').tariffs__price-label
+                if dataSwitch
+                  div(data-switch-element=dataSwitch.left.attributeValue)
+                    +tariffs__price-val(item.priceBefore, item.price)
+                  div(style='display: none;' data-switch-element=dataSwitch.right.attributeValue)
+                    +tariffs__price-val('', '250 000 ₽')
+                else
+                  +tariffs__price-val(item.priceBefore, item.price)
+              +ui-button(item.button, 'tariffs, --white')(href='#')
+            .tariffs__footnote !{item.footnote}
+      if data.items.length > 2
+        +ui-swiper-scrollbar('--light')
+    block
+
+mixin tariffs__prop(name, index)
+  .tariffs__prop&attributes(attributes)
+    +ui-p1(name, '--medium').tariffs__name
+    +ui-p1(index, '--medium').tariffs__count
+
+mixin tariffs__price-val(priceBefore, price)
+  .tariffs__price-val.block-fade-in
+    if priceBefore
+      span.tariffs__price-prev !{priceBefore}
+    | !{price}

@@ -1,0 +1,31 @@
+.ui-swiper {
+  &-scrollbar {
+    width: 100%;
+    max-width: 110px;
+    margin-top: 20px;
+    @include media-tablet {
+      max-width: 175px;
+      margin-top: 25px;
+    }
+    .swiper-scrollbar {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #ededed;
+      border-radius: 4px;
+      &-drag {
+        background: #343434;
+      }
+    }
+    &--light {
+      .swiper-scrollbar {
+        background: #606060;
+        &-drag {
+          background: $bg-white;
+        }
+      }
+    }
+  }
+}

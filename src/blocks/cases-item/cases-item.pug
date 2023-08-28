@@ -1,0 +1,26 @@
+mixin cases-item(type, mods)
+  -
+    const baseName = 'cases-item'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  a.cases-item(class=allMods href='#')&attributes(attributes)
+    .cases-item__head
+      +popover('Смотреть проект', 'cases-item, --pd-l')
+      .cases-item__img
+        img(src='../../images/cases_item_img.jpg', alt='')
+      .cases-item__tag Сайт
+    .cases-item__content
+      if type === 'simular'
+        +ui-h3('Компания “Volvo”', 'cases-item, --bold')
+        +ui-p1('По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного', '--medium').text-body
+      else
+        .cases-item__descr Интернет магазин строительного оборудования
+
+    block

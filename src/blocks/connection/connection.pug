@@ -1,0 +1,17 @@
+mixin connection(mods)
+  -
+    const baseName = 'connection'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .connection(class=allMods)&attributes(attributes)
+    +ui-h2('Время обсудить ваш проект', 'connection, --bold')
+    +form('connection')
+    +contacts-list('connection')
+    block

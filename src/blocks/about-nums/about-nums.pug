@@ -1,0 +1,27 @@
+mixin about-nums(mods)
+  -
+    const baseName = 'about-nums'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { value: '25', text: 'сертифицированных специалистов в&nbsp;команде' },
+      { value: '9', text: 'лет опыта в&nbsp;сфере digital' },
+      { value: '250', text: 'проектов реализовано и&nbsp;запущено' },
+      { value: '40', text: 'сертификатов по&nbsp;разным направлениям' },
+    ]
+
+  .about-nums(class=allMods)&attributes(attributes)
+    each item, index in items
+      .about-nums__item
+        .about-nums__value=item.value
+          span.text-blue +
+        +ui-p1(item.text, 'about-nums')
+    block

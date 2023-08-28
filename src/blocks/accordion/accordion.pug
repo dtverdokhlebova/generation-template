@@ -1,0 +1,30 @@
+mixin accordions(mods)
+  -
+    const baseName = 'accordions'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .accordions(class=allMods)&attributes(attributes)
+    block
+
+mixin accordions__item(head)
+  .accordions__item&attributes(attributes)
+    .accordions__head
+      +ui-h3(head, '--bold')
+      +ui-switch-button('accordions')
+    .accordions__body
+      .accordions__text
+        -for(let i=1; i<3; i++)
+          .accordions__text-box
+            +ui-h5('', '--bold').accordions__text-head
+              span.text-blue=`0${i}`
+              |  Обсуждение технического задания, анализ конкурентов
+            .accordions__text-main
+              +ui-p1('Текст, текст, текст, текст,текст, текст,текст, тексттекст, текст', '--medium').text-grey
+      block

@@ -1,0 +1,18 @@
+mixin many-clients(mods)
+  -
+    const baseName = 'many-clients'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .many-clients(class=allMods)&attributes(attributes)
+    .inner
+      .many-clients__title Более 250 компаний <br>по&nbsp;всей России и&nbsp;за&nbsp;ее&nbsp;пределами
+    .many-clients__img
+      img(src='../../images/many_clients_img.png', alt='')
+    block

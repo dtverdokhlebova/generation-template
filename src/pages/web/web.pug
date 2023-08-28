@@ -1,0 +1,151 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'web'
+    const pageTitle = 'Web'
+
+  -
+    const switchTariffsData = {
+      buttonOnclick: 'uiSwitchButton(this)',
+      groupName: 'tarifs_web_price',
+      left: {
+        id: 'tarifs_web_price_1',
+        text: '(WP)',
+        attributeName: 'data-switch-target',
+        attributeValue: 'tarifs_web_price_1',
+      },
+      right: {
+        id: 'tarifs_web_price_2',
+        text: '(Bitrix)',
+        attributeName: 'data-switch-target',
+        attributeValue: 'tarifs_web_price_2',
+      },
+    }
+
+  -
+    const tariffsData ={
+      idSwitch: 'web',
+      items: [
+        { title: 'Лендинг',
+          priceBefore: 'от ',
+          price: '120 500 ₽',
+          button: 'Оставить заявку',
+          more: true,
+          props: [
+            { name: 'До 5 блоков' },
+            { name: 'Вспывающие формы и&nbsp;лид&nbsp;магниты' },
+            { name: 'Система управления WP или&nbsp;Bitrix' },
+            { name: 'Адаптивная версия' },
+            { name: 'Настройка форм на&nbsp;почту или&nbsp;телеграм ' },
+          ]
+        },
+        { title: 'Интернет-магазин',
+          priceBefore: 'от ',
+          price: '750 000 ₽',
+          button: 'Оставить заявку',
+          more: true,
+          props: [
+            { name: 'Все разделы для eCommerce ' },
+            { name: 'Интеграция с&nbsp;1С ' },
+            { name: 'Система управления Bitrix' },
+            { name: 'Адаптивная версия' },
+            { name: 'Личный кабинет' },
+          ]
+        },
+        { title: 'Квиз-лендинг',
+          price: '22 700 ₽',
+          button: 'Оставить заявку',
+          more: true,
+          props: [
+            { name: 'Основной экран' },
+            { name: 'Квиз' },
+            { name: 'Всплывающие формы <span class="text-nowrap">и лид-магниты</span>' },
+            { name: 'Адаптивная версия' },
+            { name: 'Система управления&nbsp;WP' },
+          ]
+        },
+        { title: 'Корпоративный сайт',
+          priceBefore: 'от ',
+          price: '250 000 ₽',
+          button: 'Оставить заявку',
+          more: true,
+          props: [
+            { name: 'До 5 стандартных блоков' },
+            { name: 'Каталог для&nbsp;SEO' },
+            { name: 'Система управления WP или&nbsp;Bitrix' },
+            { name: 'Адаптивная версия' },
+            { name: 'Настройка форм на почту или&nbsp;телеграм ' },
+          ]
+        },
+      ]
+    }
+
+block content
+  main.main
+    +section
+      .inner
+        +banner
+    +section('--bg, --mt0')
+      +section
+        .inner
+          +approach
+      +section('--ov-hidden')
+        .inner
+          +section-head('--with-switch')
+            +section-head('--max-w-xxxxxs')
+              +ui-h2('Наши тарифы', 'section-head, --bold')
+              +ui-p1('Выберите для&nbsp;себя удобный тариф исходя из&nbsp;ваших целей', 'section-head').text-grey
+            +ui-switch(switchTariffsData)
+          +tariffs(tariffsData, switchTariffsData, '--items-xl')
+      +section
+        .inner
+          +section-head('--bb')
+            +ui-h2('Этапы разработки', 'section-head, --bold')
+            +ui-p1('Лендинги, многостраничные сайты и интернет магазины', 'section-head').text-grey
+          +accordions
+            +accordions__item('Знакомство')
+            +accordions__item('Создание прототипа')
+            +accordions__item('Разработка дизайна')
+            +accordions__item('Подготовка к&nbsp;верстке')
+            +accordions__item('Тестирование проекта')
+            +accordions__item('Сдача продукта')
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

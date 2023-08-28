@@ -1,0 +1,73 @@
+-
+  const headerMenu = [
+    {
+      link: '/',
+      name: 'Главная'
+    },
+    {
+      link: '#',
+      name: 'О нас'
+    },
+    {
+      link: '#',
+      name: 'Услуги',
+      submenu: [
+        {
+          link: '#',
+          name: 'Web-разработка',
+        },
+        {
+          link: '#',
+          name: 'Контекстная реклама',
+        },
+        {
+          link: '#',
+          name: 'Таргетированная реклама',
+        },
+        {
+          link: '#',
+          name: 'SEO-продвижение',
+        },
+        {
+          link: '#',
+          name: 'SMM-продвижение',
+        },
+        {
+          link: '#',
+          name: 'Продвижение геосервисов',
+        }
+      ]
+    },
+    {
+      link: '#',
+      name: 'Контакты'
+    }
+  ]
+
+header.header
+  .inner
+    a.header__logo(href='/')
+      +svg('icon_logo')
+    .header__burger
+      ul.header__menu
+        each item in headerMenu
+          li.header__item
+            if item.submenu
+              .header__link.header__link--arrow(onclick='window.openSubmenu(this)') !{item.name}
+                +svg('menu-arrow')
+              ul.header__submenu
+                each subitem in item.submenu
+                  li.header__subitem
+                    a.header__sublink(href=subitem.link) !{subitem.name}
+            else
+              a.header__link(href=item.link) !{item.name}
+      +ui-button('👉 Оставить заявку', 'header, --blue')(href='#section-form' onclick='window.toggleBurger()')
+      +socials('header')
+    a.header__wa(href='#')
+      img.header__wa-fall(src='../../images/icon_wa-color.svg' alt='')
+      img.header__wa-icon(src='../../images/icon_wa-color.svg' alt='')
+      | Связаться в&nbsp;WhatsApp
+    button.header__burger-button(onclick='window.toggleBurger()')
+      span
+      span
+      span

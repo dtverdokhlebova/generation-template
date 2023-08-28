@@ -1,0 +1,13 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'contacts'
+    const pageTitle = 'Contacts'
+    const footerMods = 'footer--light'
+
+block content
+  main.main
+    +section('--ov-hidden')
+      .inner
+        +contacts

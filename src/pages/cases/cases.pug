@@ -1,0 +1,59 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'cases'
+    const pageTitle = 'Cases'
+
+block content
+  main.main.main--pt
+    +section
+      .inner
+        +section-head('--bb-light, --l-mb-s')
+          +ui-h1('Наши кейсы', 'section-head, --xl, --bold')
+            span.text-blue .
+          +ui-p1('Пусть наши работы говорят вместо нас', '--medium, --l-size-l').text-body
+          +cases-filter('section-head')
+        +cases('simular')#cases
+        +section('--mt-xxxs', 'div').text-center
+          +ui-button('Смотреть все', '--outline-grey, --min-w, --px-xl')(onclick="toggleHidden(this, '#cases')" data-text-start='Смотреть все' data-text-end='Свернуть')
+
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

@@ -1,0 +1,64 @@
+.ui-choice {
+  position: relative;
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    &:checked {
+      ~ label {
+        background: #343434;
+      }
+    }
+  }
+  label {
+    display: inline-block;
+    padding: 10px;
+    background: #1E1E1E;
+    border-radius: 10px;
+    font-family: $fontInt;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.48;
+    color: $grey;
+    transition: $transitionDuration;
+    cursor: pointer;
+    @include media-hover {
+      background: #343434;
+    }
+  }
+  &--light {
+    input {
+      &:checked {
+        ~ label {
+          background: $grey-icons;
+        }
+      }
+    }
+    label {
+      background: transparent;
+      border: 1px solid #DEDEDE;
+      color: $body-text;
+      @include media-hover {
+        background: $grey-icons;
+      }
+    }
+  }
+  &--dark-checked {
+    input {
+      &:checked {
+        ~ label {
+          background: $elements-group;
+          background-color: $elements-group;
+          color: $bg-white;
+        }
+      }
+    }
+  }
+  &--l-xl {
+    label {
+      @include media-laptop {
+        padding: 12px 25px;
+      }
+    }
+  }
+}

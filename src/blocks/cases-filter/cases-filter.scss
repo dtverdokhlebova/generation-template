@@ -1,0 +1,16 @@
+.cases-filter {
+  position: relative;
+  &__ui-p1 {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @include media-laptop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

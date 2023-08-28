@@ -1,0 +1,26 @@
+mixin swipe(data, mods)
+  -
+    const baseName = 'swipe'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .swipe(class=allMods)&attributes(attributes)
+    .swiper
+      .swiper-wrapper
+        .swipe__slide.swiper-slide
+          .swipe__label
+            +ui-h4(data.label, '--bold')
+          .swipe__main
+            each row in data.rows
+              .swipe__row
+                each img in row.imgs
+                  .swipe__img(class=img.mods)
+                    img(src=`../../images/${img.img}`, alt='')
+    +ui-swiper-scrollbar('--light')
+    block

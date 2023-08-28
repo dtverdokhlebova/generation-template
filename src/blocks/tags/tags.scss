@@ -1,0 +1,19 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  &__item {
+    min-width: 90px;
+    padding: 10px 15px;
+    color: $grey;
+    text-align: center;
+    background: $elements-group;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    &--bg-blue {
+      background: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+  }
+}

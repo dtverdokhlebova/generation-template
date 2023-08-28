@@ -1,0 +1,44 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageTitle = 'Index'
+    const footerMods = 'footer--light'
+
+block content
+  main.main
+    +section
+      .inner
+        br
+        br
+        br
+        br
+        +ui-p1
+          p
+            +ui-button('Main', '--text')(href='main.html')
+          p
+            +ui-button('Smm', '--text')(href='smm.html')
+          p
+            +ui-button('Seo', '--text')(href='seo.html')
+          p
+            +ui-button('Target', '--text')(href='target.html')
+          p
+            +ui-button('Web', '--text')(href='web.html')
+          p
+            +ui-button('Geoservices', '--text')(href='geoservices.html')
+          p
+            +ui-button('Yandex Direct', '--text')(href='direct-yandex.html')
+          p
+            +ui-button('Contacts', '--text')(href='contacts.html')
+          p
+            +ui-button('Cases', '--text')(href='cases.html')
+          p
+            +ui-button('Cases inner', '--text')(href='cases-inner.html')
+          p
+            +ui-button('Cases inner 2', '--text')(href='cases-inner-2.html')
+          p
+            +ui-button('Page 404', '--text')(href='page-404.html')
+        br
+        br
+        br
+        br

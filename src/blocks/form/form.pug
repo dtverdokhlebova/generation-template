@@ -1,0 +1,35 @@
+mixin form(mods = '')
+  -
+    const baseName = 'form'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+    const inputMod = mods.includes('--light') ? '--light' : ''
+    const choiceMod = mods.includes('--light') ? '--light' : ''
+
+  form.form(class=allMods)&attributes(attributes)
+    +ui-h4('Свяжитесь с нами!', 'form, --bold').block-none.block-none--bf-tablet
+    .form__section
+      .form__fields
+        +ui-input('tel', inputMod)(placeholder='Телефон')
+          .ui-input__error.block-fade-in.active Поле заполнено некорректно
+        +ui-input('name', inputMod)(placeholder='Имя')
+    .form__section
+      +ui-h6('Выберите услугу:', 'form, --bold')
+      .form__options
+        +ui-choice('Web-разработка', 'web-dev', choiceMod)
+        +ui-choice('SEO продвижение', 'seo', choiceMod)
+        +ui-choice('Quiz bot', 'quiz-bot', choiceMod)
+        +ui-choice('Контекстная реклама', 'context-ads', choiceMod)
+        +ui-choice('Таргетированная реклама', 'target-ads', choiceMod)
+    .form__section
+      +ui-button('👉 Отправить', '--blue, --w100')(type='submit')
+      .form__fn Нажимая кнопку отправить, вы соглашаетесь с&nbsp;
+        a(href='#' target='_blank') политикой конфиденциальности
+    block

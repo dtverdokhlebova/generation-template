@@ -1,0 +1,49 @@
+mixin section(mods, type)
+  -
+    const baseName = 'section'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  case type
+    when 'div'
+      .section(class=allMods)&attributes(attributes)
+        block
+    default
+      section.section(class=allMods)&attributes(attributes)
+        block
+
+mixin section-head(mods)
+  -
+    const baseName = 'section-head'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .section-head(class=allMods)&attributes(attributes)
+    block
+
+mixin section-main(mods)
+  -
+    const baseName = 'section-main'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .section-main(class=allMods)&attributes(attributes)
+    block

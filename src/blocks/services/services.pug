@@ -1,0 +1,35 @@
+mixin services(items, mods)
+  -
+    const baseName = 'services'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .services(class=allMods)&attributes(attributes)
+    .services__nav
+      each item, index in items
+        .services__item
+          .services__progress
+          .services__head
+            if item.icon
+              .services__icon
+                img(src=`../../images/${item.icon}`, alt='')
+            else
+              +ui-p1(`0${index+1}`, '--l-h4').services__count
+            +ui-p1(item.title, 'services, --l-h4')
+          .services__body
+            .services__img
+              img(src=`../../images/${item.img}`, alt='')
+    .services__slider
+      .swiper
+        .swiper-wrapper
+          each item, index in items
+            .swiper-slide
+              .services__img
+                img(src=`../../images/${item.img}`, alt='')
+    block

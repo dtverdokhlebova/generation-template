@@ -1,0 +1,32 @@
+mixin goals(goalsData, mods)
+  -
+    const baseName = 'goals'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .goals(class=allMods)&attributes(attributes)
+    each item, index in goalsData.items
+      .goals__item(class=(index === 0 ? 'goals__item--open goals__item--active' : ''))
+        .goals__arrow
+          +svg('icon_arrow_down')
+        .goals__button
+          .goals__title !{item.title}
+        .goals__body
+          .goals__content
+            .goals__text
+              .goals__text-wrapper
+                .goals__subtitle !{item.titleInner}
+                +ui-p1(item.descr, 'goals, --medium').text-body
+            .goals__pictures(class=item.picturesMods)
+              .goals__pictures-wrap
+                each img in item.imgs
+                  .goals__img(class=img.mods)
+                    img(src=`../../images/${img.src}` alt='')
+            +ui-button('Получить предложение', 'goals')(href='#')
+    block

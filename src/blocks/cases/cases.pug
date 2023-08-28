@@ -1,0 +1,22 @@
+mixin cases(type, mods)
+  -
+    const baseName = 'cases'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .cases(class=allMods)&attributes(attributes)
+    case type
+      when 'simular'
+        -for(let i=0; i<6; i++)
+          +cases-item('', '--t-short')(class=(i>3 ? 'block-none block-none--all' : '') data-hidden=(i > 3 ? 'true' : 'false'))
+        block
+      default
+        -for(let i=0; i<2; i++)
+          +cases-item('simular', '--on-dark-bg')
+        block

@@ -1,0 +1,94 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'geoservices'
+    const pageTitle = 'Geoservices'
+
+  -
+    const servicesGeoItems =[
+      { icon: 'icon_yandex_map.png', title: 'Яндекс Карты', img: 'services_img_geo_yandex_map.jpg' },
+      { icon: 'icon_yandex_browser.png', title: 'Яндекс Браузер', img: 'services_img_geo_yandex_browser.jpg' },
+      { icon: 'icon_google_map.png', title: 'Google Карты', img: 'services_img_geo_google_map.jpg' },
+      { icon: 'icon_google_search.png', title: 'Google Поиск', img: 'services_img_geo_google_search.jpg' },
+    ]
+
+  -
+    const smallBannerData ={
+      h2: 'Стоимость услуг',
+      p1: 'У нас нет пакетного решения по&nbsp;стоимости услуг в&nbsp;продвижении гео&nbsp;сервисов. Все очень индивидуально и&nbsp;зависит от&nbsp;различных факторов',
+      priceNew: '19 500 - 35 000 ₽/мес.',
+      btn: '👉 Отправить на расчет',
+      picturesMods: 'small-banner__pictures--l',
+      imgs: [
+        { src: 'small_banner_img_price_1.png', mods: '' },
+        { src: 'small_banner_img_price_2.png', mods: '', parallax: -17 },
+        { src: 'small_banner_img_price_4.png', mods: '', parallax: 12 },
+        { src: 'small_banner_img_price_5.png', mods: '', parallax: -2 },
+        { src: 'small_banner_img_price_6.png', mods: '', parallax: 18 },
+        { src: 'small_banner_img_price_3.png', mods: '', parallax: -10 },
+      ]
+    }
+
+block content
+  main.main
+    +section
+      .inner
+        +banner
+    +section('--mt0')
+      .inner
+        +section-head('--max-w-xs')
+          +ui-h2('Как с помощью карт получать поток обращений:', 'section-head, --bold')
+        +why-maps
+    +section
+      .inner
+        +section-head('--t-flex, --w-items-l')
+          +ui-h2('Где клиенты могут вас найти', 'section-head, --bold')
+          +ui-p1('Мы проводим анализ ниши и&nbsp;прорабатываем только те&nbsp;запросы, которые могут привести вам клиента', 'section-head').text-grey
+        +services(servicesGeoItems, '--light')
+    +section('--bg, --pt0')
+      +section
+        .inner
+          +map-search
+      +section
+        .inner
+          +small-banner(smallBannerData)
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

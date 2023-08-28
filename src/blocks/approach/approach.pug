@@ -1,0 +1,39 @@
+mixin approach(mods)
+  -
+    const baseName = 'approach'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const sliderItems =[
+      { title: 'Volvo в&nbsp;Воронеже', descr: 'Разработка сайта для&nbsp;компании ....', img: 'approach_slider_img_volvo.jpg' },
+      { title: 'Выбор', descr: 'Разработка сайта для&nbsp;компании ....', img: 'approach_slider_img_vyborstroi.jpg' },
+      { mods: 'approach-slider__item--black', title: 'ВСЕМ СУШИ', descr: 'Разработка сайта для&nbsp;компании ....', img: 'approach_slider_img_vsem_sushi.jpg' },
+      { title: 'Партнер', descr: 'Разработка сайта для&nbsp;компании ....', img: 'approach_slider_img_partner.jpg' },
+      { title: 'Audi центр в Воронеже', descr: 'Разработка сайта для&nbsp;компании ....', img: 'approach_slider_img_audi.jpg' },
+    ]
+
+  .approach(class=allMods)&attributes(attributes)
+    .approach__content
+      +ui-h2('Наш подход', 'approach, --bold')
+      +ui-p1('', 'approach')
+        p В&nbsp;этом году мы&nbsp;немного изменили свой подход и&nbsp;начали проводить более глубокий анализ в&nbsp;нише, прежде чем предлагать нашим заказчикам решение по&nbsp;разработке.
+        p Наша задача&nbsp;&mdash; не&nbsp;продать вам максимум, а&nbsp;реализовать&nbsp;то, что будет приносить прибыль. И, соответственно, долгосрочные партнерские взаимоотношения.
+    .approach-slider
+      .swiper
+        .swiper-wrapper
+          each item in sliderItems
+            .approach-slider__item.swiper-slide(class=item.mods)
+              .approach-slider__text
+                .approach-slider__title !{item.title}
+                +ui-p1(item.descr, 'approach-slider')
+              .approach-slider__img
+                img(src=`../../images/${item.img}` alt=item.title)
+        +ui-swiper-scrollbar('--light')
+    block

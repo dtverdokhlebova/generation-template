@@ -1,0 +1,25 @@
+.why-maps {
+  display: grid;
+  gap: 20px;
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  @include media-laptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    padding: 25px 25px 50px;
+    background: #f8f8f8;
+    border: 1px solid $border;
+    border-radius: 10px;
+    @include media-tablet {
+      padding: 50px 30px 60px;
+    }
+  }
+  &__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+  }
+}

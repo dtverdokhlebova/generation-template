@@ -1,0 +1,37 @@
+.stages {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-laptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    padding: 25px;
+    color: $white;
+    background: $elements-group;
+    border-radius: 15px;
+    @include media-tablet {
+      padding: 30px 35px;
+      border-radius: 10px;
+    }
+  }
+  &__count {
+    margin-bottom: 8px;
+    color: $blue;
+    @include media-tablet {
+      margin-bottom: 15px;
+    }
+  }
+  &__ui-h4 {
+    margin-bottom: 15px;
+    @include media-tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__ui-p1 {
+    color: $grey;
+  }
+}

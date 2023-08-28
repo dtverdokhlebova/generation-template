@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.swiper {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+*:focus {
+  outline: none;
+}
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+  &.no-scroll {
+    overflow: hidden;
+    body {
+      overflow: hidden;
+    }
+  }
+  &.lenis {
+    height: auto;
+  }
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: optimize-contrast;
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  image-rendering: -webkit-optimize-contrast;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  @include media-hover {
+    text-decoration: underline;
+  }
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+// defaults
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: $font;
+  font-variation-settings: 'wdth' 124, 'GRAD' 0, 'slnt' 0, 'XTRA' 485, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'opsz' 28;
+  color: $main-color;
+  background: $bg-white;
+}
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 $innerPd;
+}
+.main {
+  flex: 1 0;
+  &--pt {
+    padding-top: 90px;
+    @include media-tablet {
+      padding-top: 120px;
+    }
+    @include media-laptop {
+      padding-top: 175px;
+    }
+  }
+}
+.text {
+  &-blue {
+    color: $blue;
+  }
+  &-grey {
+    color: $grey;
+  }
+  &-body {
+    color: $body-text;
+  }
+  &-center {
+    text-align: center;
+    &--t-left {
+      @include media-tablet {
+        text-align: left;
+      }
+    }
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+}
+.block {
+  &-none {
+    &.block-none--all {
+      display: none !important;
+    }
+    &.block-none--laptop {
+      @include media-laptop {
+        display: none !important;
+      }
+    }
+    &.block-none--bf-laptop {
+      @include media-tablet-d-first {
+        display: none !important;
+      }
+    }
+    &.block-none--bf-tablet {
+      @include media-tablet-d-first {
+        display: none !important;
+      }
+    }
+    &.block-none--mobile {
+      @include media-mobile {
+        display: none !important;
+      }
+    }
+    &.block-none--bf-mobile {
+      @include media-mobile-d-first {
+        display: none !important;
+      }
+    }
+  }
+  &-fade-in {
+    animation: fade-in 0.3s;
+  }
+}

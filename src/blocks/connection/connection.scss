@@ -1,0 +1,43 @@
+.connection {
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 1fr 39%;
+    gap: 30px;
+    align-items: start;
+  }
+  @include media-tablet-horizontal {
+    display: grid;
+    grid-template-columns: 33% 50%;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  @include media-laptop {
+    grid-template-columns: 30.8% 41.79%;
+  }
+  &__ui-h2 {
+    max-width: 270px;
+    margin-bottom: 38px;
+    @include media-tablet {
+      grid-column: 1/-1;
+      max-width: unset;
+      margin-bottom: 0;
+    }
+    @include media-tablet-horizontal {
+      grid-column: unset;
+      margin-bottom: auto;
+    }
+  }
+  &__form {
+    @include media-tablet-horizontal {
+      grid-row: 1/-1;
+      grid-column: 2/-1;
+    }
+    &:not(:last-child) {
+      margin-bottom: 67px;
+      @include media-tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

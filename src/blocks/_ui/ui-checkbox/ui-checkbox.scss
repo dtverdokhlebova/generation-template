@@ -1,0 +1,61 @@
+.ui-checkbox {
+  position: relative;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    &:checked + label {
+      .svg {
+        opacity: 1;
+      }
+    }
+  }
+  label {
+    position: relative;
+    display: flex;
+    padding-left: 26px;
+    font: 13px/1.26 $fontInt;
+    color: $grey;
+    cursor: pointer;
+    user-select: none;
+    @include media-tablet {
+      font-size: 14px;
+    }
+    @include media-laptop {
+      font-size: 16px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--bg-color);
+      border-radius: 2px;
+      @include media-laptop {
+        width: 19px;
+        height: 19px;
+        border-radius: 3px;
+      }
+    }
+    .svg {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      color: var(--check-color);
+      opacity: 0;
+      transition: $transitionDuration;
+      @include media-laptop {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+}

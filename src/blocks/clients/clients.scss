@@ -1,0 +1,14 @@
+.clients {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 50px;
+    @include media-mobile {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media-laptop {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 42px 70px;
+    }
+  }
+}

@@ -1,0 +1,214 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'direct-yandex'
+    const pageTitle = 'Yandex Direct'
+
+  -
+    const ServicesAdtItems =[
+      { title: 'Проверка рекламных странинц', price: 'от 2 500 руб/ч.' },
+      { title: 'Создание магазина&nbsp;(Vk)', price: 'от 500 руб/ч. ' },
+      { title: 'Разблокировка аккаунтов', price: 'от 2 500 руб' },
+      { title: 'Отрисовка креативов', price: 'от 2 500 руб' },
+      { title: 'Помощь в&nbsp;ведении профилей', price: 'от 2 500 руб' },
+      { title: 'item hidden', price: 'от 2 500 руб', hidden: true },
+      { title: 'item hidden', price: 'от 2 500 руб', hidden: true },
+    ]
+
+  -
+    const countListItems =[
+      { title: 'Конвертировать интерес аудитории в&nbsp;покупку товара/услуги' },
+      { title: 'Повысить узнаваемость бренда или&nbsp;нового продукта на&nbsp;рынке' },
+      { title: 'Возвращать клиентов' },
+      { title: 'Стимулировать повторные покупки товаров/услуг' },
+    ]
+
+  -
+    const goalsItems ={
+      items: [
+        { title: 'Реклама в поиске',
+          titleInner: 'Реклама в поиске',
+          descr: 'Реклама на&nbsp;поиске отвечает на&nbsp;введенный пользователем запрос, подходящим рекламным предложением. Показывается в&nbsp;результатах поиска Яндекса и&nbsp;на&nbsp;поисковых сайтах партнеров.',
+          imgs: [
+            { src: 'goals_ya_1_1.jpg', mods: 'goals__img--ya-1-1' },
+            { src: 'goals_ya_1_2.jpg', mods: 'goals__img--ya-1-2' },
+          ]
+        },
+        { title: 'Реклама в сетях',
+          titleInner: 'Реклама в сетях',
+          descr: 'Реклама в&nbsp;сетях соответствует интересам пользователя или содержанию страницы. Размещается на&nbsp;площадках Рекламной сети Яндекса и&nbsp;внешних партнерских сетей: на&nbsp;сайтах, в&nbsp;мобильных приложениях, Smart&nbsp;TV.',
+          imgs: [
+            { src: 'goals_ya_2_1.jpg', mods: 'goals__img--left-center goals__img--m' },
+          ]
+        },
+        { title: 'Реклама товара',
+          titleInner: 'Реклама товара',
+          descr: 'Товарные кампании для интернет-магазинов (разместите товары во&nbsp;всех рекламных форматах для всех мест показа в&nbsp;Яндексе). Реклама товаров на&nbsp;маркетплейсах (OZON и&nbsp;WB). Товарная галерея (над результатами выдачи).',
+          imgs: [
+            { src: 'goals_ya_3_1.jpg', mods: 'goals__img--ya-3-1 goals__img--ya--no-shadow' },
+            { src: 'goals_ya_3_2.jpg', mods: 'goals__img--ya-3-2' },
+          ]
+        },
+        { title: 'Имиджевая реклама ',
+          titleInner: 'Имиджевая реклама ',
+          descr: 'Реклама направлена на&nbsp;формирование определенного образа бренда в&nbsp;глазах потребителей с&nbsp;оплатой за&nbsp;CPM (показы). Познакомит с&nbsp;брендом, привлечет внимание, поддержит бренд.',
+          imgs: [
+            { src: 'goals_ya_4_1.png', mods: 'goals__img--right-center goals__img--w-100 goals__img--no-shadow goals__img--no-br' },
+          ]
+        },
+        { title: 'Реклама приложений',
+          titleInner: 'Реклама приложений',
+          descr: 'Формат объявлений, с&nbsp;помощью которого можно продвигать ваши приложения для iOS и&nbsp;Android. Объявления показываются на&nbsp;поиске и&nbsp;в&nbsp;сетях, на&nbsp;мобильных устройствах, с&nbsp;которыми совместимо приложение.',
+          picturesMods: 'goals__pictures--bottom',
+          imgs: [
+            { src: 'goals_ya_5_1.png', mods: 'goals__img--ya-5-1 goals__img--no-shadow goals__img--no-br' },
+          ]
+        },
+      ]
+    }
+
+  -
+    const switchTariffsData = {
+      buttonOnclick: 'uiSwitchButton(this)',
+      groupName: 'tarifs_ya_price',
+      left: {
+        id: 'tarifs_ya_price_1',
+        text: '(WP)',
+        attributeName: 'data-switch-target',
+        attributeValue: 'tarifs_ya_price_1',
+      },
+      right: {
+        id: 'tarifs_ya_price_2',
+        text: '(Bitrix)',
+        attributeName: 'data-switch-target',
+        attributeValue: 'tarifs_ya_price_2',
+      },
+    }
+
+  -
+    const tariffsData ={
+      idSwitch: 'yandex',
+      items: [
+        { title: 'Настройка (разово)',
+          priceBefore: 'от ',
+          price: '15 000 ₽',
+          button: 'Оставить заявку',
+          footnote: 'Возможно корректировки в&nbsp;зависимости от&nbsp;выбранной социальной сети.',
+          more: true,
+          props: [
+            { name: 'До 5 блоков' },
+            { name: 'Всплывающие формы и&nbsp;лид&nbsp;магниты' },
+            { name: 'Система управления WP или&nbsp;Bitrix' },
+            { name: 'Адаптивная версия' },
+          ]
+        },
+        { title: 'Сопровождение (месяц)',
+          priceBefore: 'от ',
+          price: '17 500 ₽',
+          button: 'Оставить заявку',
+          footnote: 'Возможно корректировки в&nbsp;зависимости от &nbsp;выбранной социальной сети.',
+          more: true,
+          props: [
+            { name: 'До 5 стандартных разделов' },
+            { name: 'Каталог для&nbsp;SEO' },
+            { name: 'Система управления WP или&nbsp;Bitrix' },
+            { name: 'Адаптивная версия' },
+          ]
+        },
+        { title: 'Аудит',
+          priceBefore: 'от ',
+          price: '5 000 ₽',
+          button: 'Оставить заявку',
+          footnote: 'Возможно корректировки в&nbsp;зависимости от&nbsp;выбранной социальной сети.',
+          more: true,
+          props: [
+            { name: 'Все разделы для eCommerce ' },
+            { name: 'Интеграция с&nbsp;1С ' },
+            { name: 'Система управления Bitrix' },
+            { name: 'Адаптивная версия' },
+          ]
+        },
+      ]
+    }
+
+block content
+  main.main
+    +section('--ov-hidden')
+      .inner
+        +banner
+    +section('--bg-grey, --mt0')
+      .inner
+        +section-head('--max-w-xxxs')
+          +ui-h2('Какие задачи помогает решить:', 'section-head, --bold')
+        +count-list(countListItems)
+
+    +section
+      .inner
+        +section-head('--max-w-s')
+          +ui-h2('Яндекс Директ - больше, чем просто поисковая реклама', 'section-head, --bold')
+          +ui-p1(`Это единая платформа размещения perfomance
+            и&nbsp;имиджевой рекламы, позволяющая решать маркетинговые задачи
+            на&nbsp;всех уровнях воронки, с&nbsp;аудиторией в&nbsp;десятки
+            миллионов уникальных пользователей каждый день`, 'section-head').text-body
+        +goals(goalsItems, '--img-size-s')
+
+    +section('--bg')
+      +section('--ov-hidden')
+        .inner
+          +section-head('--with-switch')
+            +section-head('--max-w-xxs')
+              +ui-h2('Цены за услуги', 'section-head, --bold')
+              +ui-p1('У нас индивидуальный подход (нет&nbsp;фиксированных цен), стоимость услуг формируется исходя из&nbsp;объема работ на&nbsp;проекте.', 'section-head').text-grey
+            +ui-switch(switchTariffsData)
+          +tariffs(tariffsData, switchTariffsData)
+
+      +section
+        .inner
+          +section('--grid')
+            +section-head('section')
+              +ui-h2('Дополнительные услуги', 'section-head, --bold')
+              +ui-p1('В нашем прайсе есть дополнительные услуги для&nbsp;вашего удобства', 'section-head').text-grey
+            +section-main('section')
+              +services-adt(ServicesAdtItems)#services-adt
+            +ui-button('Смотреть все', 'section, --outline, --min-w, --px-xl')(onclick="toggleHidden(this, '#services-adt')" data-text-start='Смотреть все' data-text-end='Свернуть')
+
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

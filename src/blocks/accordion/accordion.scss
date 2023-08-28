@@ -1,0 +1,51 @@
+.accordions {
+  &__item {
+    color: $bg-white;
+    background: $elements-group;
+    border-radius: 15px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px;
+    cursor: pointer;
+    @include media-tablet {
+      padding: 28px 36px;
+    }
+  }
+  &__body {
+    display: none;
+    padding: 5px 18px;
+    @include media-tablet {
+      padding: 5px 36px;
+    }
+  }
+  &__text {
+    &-box {
+      display: grid;
+      gap: 25px;
+      padding: 16px 0;
+      border-top: 1px solid $elements-group;
+      @include media-tablet {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+      }
+    }
+    &-head {
+      @include media-tablet {
+        flex: 1;
+        max-width: 485px;
+      }
+    }
+    &-main {
+      flex-shrink: 0;
+      width: 255px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.certified {
+  display: grid;
+  gap: 20px;
+  @include media-laptop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  &__item {
+    display: block;
+    padding: 25px min(25px, 6.21vw) 55px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    transition: background 0.4s ease-in, border 0.4s ease-in;
+    @include media-laptop {
+      min-height: 346px;
+      padding: 68px 32px;
+    }
+    @include media-hover {
+      color: $white;
+      background: $elements-group;
+      border-color: $elements-group;
+      text-decoration: none;
+      .certified {
+        &__icon {
+          img {
+            transform: translateY(100%);
+          }
+        }
+        &__text {
+          transform: translateY(-30px);
+        }
+        &__ui-button {
+          color: $bg-white;
+        }
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    height: 46px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    @include media-laptop {
+      margin-bottom: 24px;
+      height: 55px;
+    }
+    img {
+      transition: 0.4s ease-in;
+    }
+  }
+  &__text {
+    transition: 0.4s ease-in;
+  }
+  &__ui-h4 {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+      @include media-tablet {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

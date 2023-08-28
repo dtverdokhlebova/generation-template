@@ -1,0 +1,80 @@
+.ui-input {
+  &__controls {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 13px;
+      bottom: 13px;
+      left: 18px;
+      width: 1px;
+      background: $body-text;
+      transform: translateX(-18px);
+      opacity: 0;
+      transition: $transitionDuration;
+    }
+  }
+  input {
+    width: 100%;
+    padding: 13px 18px;
+    font-family: $fontInt;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.48;
+    color: $bg-white;
+    background: #1E1E1E;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: $transitionDuration;
+    outline: none;
+    &::placeholder {
+      color: $body-text;
+    }
+    @include media-hover {
+      border-color: #343434;
+    }
+  }
+  &__error {
+    display: none;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.26;
+    font-family: $fontInt;
+    color: $error;
+    &.active {
+      display: block;
+    }
+  }
+  &.filled,
+  &.focus {
+    .ui-input__controls {
+      &::before {
+        transform: none;
+        opacity: 1;
+      }
+    }
+    input {
+      padding-left: 28px;
+      border-color: #343434;
+    }
+  }
+  &--light {
+    input {
+      background: transparent;
+      color: $body-text;
+      border-color: #DEDEDE;
+      &::placeholder {
+        color: $grey;
+      }
+      @include media-hover {
+        border-color: #DEDEDE;
+      }
+    }
+    &.filled,
+    &.focus {
+      input {
+        border-color: #DEDEDE;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.footer(class=footerMods)
+  .footer__inner
+    .footer__top
+      .inner
+        a.footer__logo(href='/')
+          +svg('icon_logo')
+        ul.footer__menu
+          each item in headerMenu
+            li.footer__item
+              if item.submenu
+                .footer__link.footer__link--arrow !{item.name}
+                  +svg('menu-arrow')
+                ul.footer__submenu
+                  each subitem in item.submenu
+                    li.footer__subitem
+                      a.footer__sublink(href=subitem.link) !{subitem.name}
+              else
+                a.footer__link(href=item.link) !{item.name}
+        -const socialsMod = footerMods && footerMods.includes('--light') ? '' : ', --dark'
+          +socials(`footer, --s${socialsMod}`)
+    .footer__bot
+      .inner
+        .footer__copy © 2023 Generation
+        .footer__links
+          a(href='#') Пользовательское соглашение
+          a(href='#') Политика конфиденциальности

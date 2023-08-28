@@ -1,0 +1,32 @@
+mixin stages(mods)
+  -
+    const baseName = 'stages'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const stagesItems =[
+      { title: 'Знакомство', text: 'Знакомство с&nbsp;вами и&nbsp;проектом' },
+      { title: 'Оформление', text: 'Составление и&nbsp;согласование сметы' },
+      { title: 'Договор', text: 'Подписание договора' },
+      { title: 'Оплата', text: 'Полная или&nbsp;частичная оплата за&nbsp;проект' },
+      { title: 'Подготовка', text: 'Обсуждение технического задания, анализ конкурентов' },
+      { title: 'Начало работы', text: 'Настройка и&nbsp;запуск рекламных кампаний, разработка страниц' },
+      { title: 'Оптимизация', text: 'Анализ рекламных кампаний и&nbsp;посадочных страниц, внесение правок' },
+      { title: 'Результат', text: 'Стремление к&nbsp;прогнозируемому KPI' },
+    ]
+
+  .stages(class=allMods)&attributes(attributes)
+    each item, index in stagesItems
+      .stages__item
+        +ui-h4(`0${index+1}`, '--bold', 'div').stages__count
+        +ui-h4(item.title, 'stages, --bold')
+        +ui-p1(item.text, 'stages')
+
+    block

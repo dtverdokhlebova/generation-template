@@ -1,0 +1,31 @@
+mixin ui-button(text, mods, leftIcon, rightIcon)
+  -
+    const baseName = 'ui-button'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  if (attributes.href)
+    a.ui-button(class=allMods)&attributes(attributes)
+      if leftIcon
+        +svg(leftIcon)
+      if text
+        | !{text}
+      block
+      if rightIcon
+        +svg(rightIcon)
+
+  else
+    button.ui-button(class=allMods)&attributes(attributes)
+      if leftIcon
+        +svg(leftIcon)
+      if text
+        | !{text}
+      block
+      if rightIcon
+        +svg(rightIcon)

@@ -1,0 +1,75 @@
+.team {
+  &__item {
+    position: relative;
+    width: 344px;
+    max-width: 100%;
+    height: 415px;
+    @include media-laptop {
+      width: 355px;
+    }
+    @include media-hover {
+      .team__photo-hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__experience {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 10px;
+    font: 500 14px/1 $fontInt;
+    color: $white;
+    background: rgb(0 0 0 / 0.4);
+    border-radius: 5px;
+    @include media-laptop {
+      inset: auto auto 15px 15px;
+    }
+  }
+  &__popover {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    @include media-laptop {
+      top: 0;
+      bottom: unset;
+      left: 0;
+      opacity: 0;
+      will-change: transform;
+      pointer-events: none;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform-origin: center center;
+      -webkit-touch-callout: none !important;
+      pointer-events: none;
+      user-select: none;
+      @include media-laptop {
+        will-change: transform;
+      }
+    }
+    &-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+  .swiper {
+    overflow: visible;
+    user-select: none;
+  }
+}

@@ -1,0 +1,31 @@
+block variables
+include ../blocks/mixins
+
+doctype html
+html(lang='ru' class=htmlMods)
+  block head
+    head
+      meta(charset='utf-8')
+      title=pageTitle
+      meta(content='width=device-width, initial-scale=1' name='viewport')
+      meta(content='ie=edge' http-equiv='x-ua-compatible')
+      link(href='https://vitejs.dev/logo.svg' rel='icon' type='image/x-icon')
+      link(href='/libs/swiper/swiper-bundle.min.css' rel='stylesheet')
+      script(src='https://api-maps.yandex.ru/2.1/?apikey=7742add4-5d3c-4060-9f01-67963d12fb4e&lang=ru_RU' type='text/javascript')
+
+  body
+    .wrapper
+      block header
+        include ../blocks/header/header
+      block content
+      block footer
+        include ../blocks/footer/footer
+      +loader
+    block scripts
+      script(src='/libs/jquery/jquery-3.6.4.min.js')
+      script(src='/libs/lenis/lenis.min.js')
+      script(src='/libs/swiper/swiper-bundle.min.js')
+      script(src='/libs/gsap/gsap.min.js')
+      script(src='/libs/gsap/ScrollTrigger.min.js')
+      script(src='/libs/chart.js/chart.min.js')
+      script(type='module' src='../../js/index.js')

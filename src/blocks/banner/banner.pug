@@ -1,0 +1,132 @@
+mixin banner(mods)
+  -
+    const baseName = 'banner'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  case pageName
+    when 'main'
+      .banner.banner--main(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Digital-агентство полного&nbsp;цикла', 'banner, --xl --bold')
+            span.banner__dot .
+          .banner__desc Настоящие профи с креативным подходом и богатым багажом знаний
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          .banner__video
+            video.banner__video-player(autoplay loop muted playsinline src='https://uploads-ssl.webflow.com/634d560fb778817748fac023/636dff114a3e3c3bab746000_TDK-transcode.mp4')
+    when 'smm'
+      .banner.banner--smm(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('SMM - продвижение в&nbsp;социальных сетях', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc Настройка таргетированной рекламы в подарок!
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          img(src='../../images/banner/banner_smm-1.png' alt='')
+          img(src='../../images/banner/banner_smm-2.png' alt='' data-parallax='-15')
+          img(src='../../images/banner/banner_smm-3.png' alt='' data-parallax='10')
+          img(src='../../images/banner/banner_smm-4.png' alt='' data-parallax='-10')
+          img(src='../../images/banner/banner_smm-5.png' alt='' data-parallax='-17')
+          img(src='../../images/banner/banner_smm-6.png' alt='' data-parallax='-8')
+          img(src='../../images/banner/banner_smm-7.png' alt='' data-parallax='-1')
+          img(src='../../images/banner/banner_smm-8.png' alt='' data-parallax='12')
+          img(src='../../images/banner/banner_smm-9.png' alt='' data-parallax='10')
+    when 'seo'
+      .banner.banner--seo(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('SEO, которое работает на&nbsp;результат', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc Аудит и&nbsp;план работ в&nbsp;подарок!
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          img.banner__drop-shadow(src='../../images/banner/banner_seo-2.png' alt='' data-parallax='15')
+          img.banner__drop-shadow(src='../../images/banner/banner_seo-3.png' alt='' data-parallax='-17')
+          img.banner__drop-shadow(src='../../images/banner/banner_seo-5.png' alt='' data-parallax='-10')
+          img.banner__drop-shadow(src='../../images/banner/banner_seo-1.png' alt='' data-parallax='19')
+          img.banner__drop-shadow(src='../../images/banner/banner_seo-4.png' alt='' data-parallax='17')
+    when 'target'
+      .banner.banner--target(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Настройка и&nbsp;сопровождение VK&nbsp;рекламы', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc Приведем клиентов из ВК рекламы. <br> Лиды от 150 рублей
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          .banner__cards
+            -for(let i=1; i<=4; i++)
+              .banner__card
+                img(src=`../../images/banner/banner_target-${i}.png` alt='')
+          .banner__progress
+            .banner__progress-val
+    when 'direct-yandex'
+      .banner.banner--yandex-direct.banner--m-pb0(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Настройка и&nbsp;сопровождение Яндекс Директ', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc.banner__desc--l-xs Эффективный инструмент продвижения от&nbsp;малого до крупного бизнеса. Клиенты с&nbsp;первых дней запуска
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          img(src='../../images/banner/banner_yandex-direct-6.png' alt='')
+          img(src='../../images/banner/banner_yandex-direct-1.png' alt='' data-parallax='-10')
+          img.banner__drop-shadow(src='../../images/banner/banner_yandex-direct-2.png' alt='' data-parallax='15')
+          img.banner__drop-shadow(src='../../images/banner/banner_yandex-direct-3.png' alt='' data-parallax='-14')
+          img(src='../../images/banner/banner_yandex-direct-4.png' alt='' data-parallax='7')
+          img(src='../../images/banner/banner_yandex-direct-5.png' alt='' data-parallax='17')
+    when 'web'
+      .banner.banner--web.banner--m-pb0(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Web-разработка', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc.banner__desc--l-xs Подзаголовок, Подзаголовок, Подзаголовок Подзаголовок
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          .banner__mockups.banner__mockups--anim
+            .banner__mockup
+              img(src='../../images/banner/banner_web-1.png' alt='')
+              img(src='../../images/banner/banner_web-2.png' alt='')
+            .banner__mockup
+              img(src='../../images/banner/banner_web-3.png' alt='')
+              img(src='../../images/banner/banner_web-4.png' alt='')
+            .banner__mockup
+              img(src='../../images/banner/banner_web-5.png' alt='')
+              img(src='../../images/banner/banner_web-6.png' alt='')
+    when 'cases-inner'
+      .banner.banner--case.banner--m-pb0(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Интернет магазин строительного оборудования', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc Пусть наши работы говорят вместо нас
+        .banner__pic
+          .banner__mockups.banner__mockups--l-size-s.banner__mockups--bg-blue
+            .banner__mockup
+              img(src='../../images/banner/banner_case-1.png' alt='')
+            .banner__mockup
+              img(src='../../images/banner/banner_case-2.png' alt='')
+            .banner__mockup
+              img(src='../../images/banner/banner_case-1.png' alt='')
+    when 'cases-inner-2'
+      .banner.banner--case.banner--m-pb0(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Клиника стоматологии', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc Пусть наши работы говорят вместо нас
+        .banner__pic
+          .banner__mockups.banner__mockups--bg-blue
+            .banner__mockup
+              img(src='../../images/banner/banner_case-3.png' alt='')
+    when 'geoservices'
+      .banner.banner--geoservices(class=allMods)&attributes(attributes)
+        .banner__content
+          +ui-h1('Продвижение на&nbsp;картах и в <span class="text-nowrap">ГЕО-сервисах</span>', 'banner, --bold')
+            span.banner__dot .
+          .banner__desc.banner__desc--l-xs Получайте максимум клиентов из&nbsp;Яндекс.Карт, Google map и 2gis
+          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+        .banner__pic
+          img(src='../../images/banner/banner_geoservices.png' alt='')

@@ -1,0 +1,56 @@
+.ui-p1 {
+  font-size: 16px;
+  line-height: 148.5%;
+  font-family: $fontInt;
+  &--t-h4 {
+    @include media-tablet {
+      font-size: 23px;
+      line-height: 132.5%;
+      font-family: $font;
+    }
+    @include media-laptop {
+      font-size: 25px;
+      line-height: 116%;
+    }
+  }
+  &--l-h4 {
+    @include media-laptop {
+      font-size: 25px;
+      line-height: 116%;
+      font-family: $font;
+    }
+  }
+  &--l-size-l {
+    @include media-laptop {
+      font-size: 18px;
+      line-height: 139.5%;
+    }
+  }
+}
+[class*='ui-p'] {
+  // &[class*='--light'] {
+  //   font-weight: 300;
+  // }
+  &[class*='--medium'] {
+    font-weight: 500;
+  }
+  &[class*='--bold'] {
+    font-weight: 700;
+  }
+  &[class*='--t-h-bold'] {
+    @include media-tablet {
+      font-weight: 650;
+    }
+  }
+  &[class*='--l-h-bold'] {
+    @include media-laptop {
+      font-weight: 650;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  p:not(:last-child) {
+    margin-bottom: 1.2em;
+  }
+}

@@ -1,0 +1,31 @@
+.count-list {
+  &__item {
+    @include media-tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $border;
+      @include media-tablet {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  &__count {
+    margin-bottom: 10px;
+    color: $blue;
+    @include media-tablet {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+  &__ui-p1 {
+    color: $body-text;
+  }
+}

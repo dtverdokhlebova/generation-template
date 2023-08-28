@@ -1,0 +1,42 @@
+mixin team(type, mods)
+  -
+    const baseName = 'team'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { name: 'Андрей, директор', img: 'team_img_andrew.jpg' },
+      { name: 'Влад, маркетинг', img: 'team_img_vlad_marketing.jpg' },
+      { name: 'Анастасия, контекст', img: 'team_img_anastasia.jpg' },
+      { name: 'Сергей, контекст', img: 'team_img_sergei_context_1.jpg' },
+      { name: 'Сергей, контекст', img: 'team_img_sergei_context_2.jpg' },
+      { name: 'Влад, разработка', img: 'team_img_vlad_development.jpg' },
+      { name: 'Вера, дизайнер', img: 'team_img_vera.jpg' },
+      { name: 'Вика, контекст', img: 'team_img_wiki.jpg' },
+      { name: 'Иван, работа с клиентами', img: 'team_img_ivan.jpg' },
+      { name: 'Влад, таргет', img: 'team_img_vlad_target.jpg' },
+      { name: 'Сергей, дизайнер', img: 'team_img_sergey_designer.jpg' },
+      { name: 'Ира, контекст', img: 'team_img_ira.jpg' },
+    ]
+
+  .team(class=allMods)&attributes(attributes)
+    .swiper
+      .swiper-wrapper
+        each item in items
+          .team__item.swiper-slide
+            .team__img
+              .team__photo
+                img(src=`../../images/${item.img}`, alt='')
+                if type === '2photo'
+                  img.team__photo-hover(src='../../images/team_img_andrew.jpg', alt='')
+            +popover(item.name, 'team, --arrow')
+            .team__experience 18 лет в digital
+      +ui-swiper-scrollbar
+    block

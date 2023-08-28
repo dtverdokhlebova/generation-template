@@ -1,0 +1,312 @@
+.goals {
+  @include media-tablet-horizontal {
+    display: flex;
+    gap: 12px;
+  }
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-areas: 'main';
+    @include media-tablet-horizontal {
+      width: 80px;
+      transition: flex $transitionDuration ease-in;
+    }
+    @include media-laptop {
+      width: 106px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @include media-tablet-horizontal {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(2) {
+      .goals__button {
+        background: #6c98ff;
+      }
+    }
+    &:nth-child(3) {
+      .goals__button {
+        background: #336fff;
+      }
+    }
+    &:nth-child(4) {
+      .goals__button {
+        background: #074df3;
+      }
+    }
+    &:nth-child(5) {
+      .goals__button {
+        background: $secondary6;
+      }
+    }
+    &--open {
+      .goals {
+        &__body {
+          display: block;
+        }
+      }
+    }
+    &--active {
+      @include media-tablet-horizontal {
+        flex: 1;
+      }
+      .goals {
+        &__arrow {
+          color: var(--text-on-grey-background, #82848D);
+          transform: rotate(180deg);
+          @include media-tablet-horizontal {
+            transform: rotate(270deg);
+          }
+        }
+        &__button {
+          opacity: 0;
+        }
+        &__body {
+          @include media-tablet-horizontal {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 32px;
+    right: 18px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    color: $white;
+    transition: $transitionDuration;
+    @include media-tablet-horizontal {
+      top: 30px;
+      right: auto;
+      left: 26px;
+      transform: rotate(90deg);
+      width: 24px;
+      height: 24px;
+    }
+    @include media-laptop {
+      left: 40px;
+    }
+  }
+  &__button {
+    grid-area: main;
+    padding: 26px 25px;
+    color: $white;
+    background: #8caeff;
+    border-radius: 15px;
+    overflow: hidden;
+    @include media-tablet-horizontal {
+      display: flex;
+      padding: 45px 0;
+      writing-mode: tb-rl;
+    }
+  }
+  &__body {
+    position: relative;
+    z-index: 1;
+    grid-area: main;
+    display: none;
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 15px;
+    overflow: hidden;
+    @include media-tablet-horizontal {
+      display: block;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: flex $transitionDuration ease-in;
+    }
+  }
+  &__content {
+    padding: 26px 25px 25px;
+    @include media-tablet-horizontal {
+      min-height: 400px;
+      padding-top: 75px;
+    }
+    @include media-laptop {
+      min-height: 444px;
+      padding: 95px 45px 45px;
+    }
+  }
+  &__text {
+    @include media-tablet-horizontal {
+      position: relative;
+      z-index: 1;
+      min-width: 100vh;
+    }
+    &-wrapper {
+      @include media-tablet-horizontal {
+        max-width: max(240px, calc(100vw - 800px));
+      }
+      @include media-laptop {
+        max-width: 290px;
+      }
+    }
+  }
+  &__title {
+    font-size: 23px;
+    font-weight: 650;
+    line-height: 132%;
+    @include media-tablet-horizontal {
+      transform: scale(-1, -1);
+      margin: auto auto 0;
+      font-size: 18px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 23px;
+    font-weight: 650;
+    line-height: 132%;
+    @include media-laptop {
+      margin-bottom: 20px;
+      font-size: 35px;
+    }
+  }
+  &__pictures {
+    position: relative;
+    max-width: 400px;
+    margin: 35px auto 0;
+    @include media-tablet-horizontal {
+      position: absolute;
+      top: 50%;
+      right: 38px;
+      transform: translateY(-50%);
+      width: 280px;
+      margin: 0;
+    }
+    @include media-laptop {
+      width: 380px;
+    }
+    &-wrap {
+      position: relative;
+      padding-top: 95%;
+    }
+    &--bottom {
+      top: auto;
+      bottom: 0;
+      transform: none;
+    }
+  }
+  &__img {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.14);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &--left-center {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &--right-center {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    &--w-100 {
+      width: 100%;
+    }
+    &--m {
+      width: 76%;
+    }
+    &--xs {
+      width: 70%;
+    }
+    &--xxs {
+      width: 45%;
+    }
+    &--xxxxs {
+      width: 25%;
+    }
+    &--no-shadow {
+      box-shadow: none;
+    }
+    &--no-br {
+      border-radius: 0;
+    }
+    &--ya-1-1 {
+      right: 0;
+      bottom: 3%;
+      @include media-laptop {
+        bottom: 50%;
+        width: 90%;
+      }
+    }
+    &--ya-1-2 {
+      right: 0;
+      bottom: 56%;
+      @include media-laptop {
+        bottom: 15%;
+      }
+    }
+    &--ya-3-1 {
+      top: 50%;
+      left: 25%;
+      transform: translateY(-50%);
+      width: 60%;
+    }
+    &--ya-3-2 {
+      top: 50%;
+      left: 2%;
+      transform: translateY(-50%);
+      width: 30%;
+    }
+    &--ya-5-1 {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55%;
+      height: 100%;
+      overflow: hidden;
+      @include media-tablet-horizontal {
+        width: 68%;
+        height: 130%;
+      }
+      img {
+        height: unset;
+        max-height: unset;
+        object-fit: unset;
+      }
+    }
+  }
+  &__ui-button {
+    width: 100%;
+    margin-top: 30px;
+    @include media-tablet-horizontal {
+      width: auto;
+      margin-top: 45px;
+    }
+  }
+  &--img-size-s {
+    .goals {
+      &__text {
+        &-wrapper {
+          @include media-laptop {
+            max-width: 400px;
+          }
+        }
+      }
+      &__ui-p1 {
+        @include media-laptop {
+          max-width: 385px;
+        }
+      }
+      &__pictures {
+        @include media-laptop {
+          width: 310px;
+        }
+        &-wrap {
+          padding-top: 82%;
+        }
+      }
+    }
+  }
+}

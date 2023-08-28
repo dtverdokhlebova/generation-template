@@ -1,0 +1,86 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'cases-inner-2'
+    const pageTitle = 'Cases inner'
+
+  -
+    const swipeItems ={
+      label: 'Анализируемый период за сентябрь:',
+      rows: [
+        { imgs: [
+            { img: 'swipe_img_case_3.jpg', mods: 'swipe__img--s' },
+            { img: 'swipe_img_case_3.jpg', mods: 'swipe__img--s' },
+          ]
+        },
+        { imgs: [
+            { img: 'swipe_img_case_4.jpg', mods: 'swipe__img--xs' },
+          ]
+        },
+      ]
+    }
+
+block content
+  main.main
+    +section
+      .inner
+        +banner
+    +section('--bg, --mt0')
+      +section
+        .inner
+          +section-head('--max-w-xxxxxs, --t-flex, --bb')
+            +ui-h2('Описание <br> проекта', 'section-head')
+            +tags([{text: 'Продажа товаров'},{text: 'Интернет магазин'},{text: 'UX/UI'},{text: 'Сайт под ключ'}])
+          +case-desc
+      +section
+        .inner
+          +swipe(swipeItems, '--label-top, --bg-dark-blue')
+          +section('--mt-xxxs, --text-grid, --l-first-clm-s', 'div').text-grey
+            +ui-p1('В настоящее время клиент доволен результатом проделанной работы, продолжаем сотрудничество, с первого месяца работы стоимость лида уже была лучше, чем в прошлой рекламной кампании, также мы улучшали наши показатели из периода в период.', '--medium')
+            +ui-p1('В&nbsp;наши дальнейшие планы входит проведение соответствующих работ по&nbsp;ещё большему улучшению показателей, за&nbsp;счет оптимизации кампаний, расширения ключевых запросов, рекламных инструментов и&nbsp;работы с&nbsp;системами аналитики. Это хороший пример, для чего нужно оставлять проект на&nbsp;сопровождении, если этим будут заниматься грамотные специалисты, то&nbsp;результат себя окупит.', '--medium')
+      +section
+        .inner
+          +section-head
+            +ui-h2('Похожие проекты', 'section-head, --bold')
+          +cases
+
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

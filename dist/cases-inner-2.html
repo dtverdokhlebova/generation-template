@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Cases inner</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="https://vitejs.dev/logo.svg" rel="icon" type="image/x-icon">
+    <link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7742add4-5d3c-4060-9f01-67963d12fb4e&amp;lang=ru_RU" type="text/javascript"></script>
+    <script type="module" crossorigin src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="inner"><a class="header__logo" href="/">
+            <svg class="svg svg--icon_logo">
+              <use xlink:href="images/sprite.svg#icon_logo"></use>
+            </svg></a>
+          <div class="header__burger">
+            <ul class="header__menu">
+              <li class="header__item"><a class="header__link" href="/">Главная</a>
+              </li>
+              <li class="header__item"><a class="header__link" href="#">О нас</a>
+              </li>
+              <li class="header__item">
+                <div class="header__link header__link--arrow" onclick="window.openSubmenu(this)">Услуги
+                  <svg class="svg svg--menu-arrow">
+                    <use xlink:href="images/sprite.svg#menu-arrow"></use>
+                  </svg>
+                </div>
+                <ul class="header__submenu">
+                  <li class="header__subitem"><a class="header__sublink" href="#">Web-разработка</a></li>
+                  <li class="header__subitem"><a class="header__sublink" href="#">Контекстная реклама</a></li>
+                  <li class="header__subitem"><a class="header__sublink" href="#">Таргетированная реклама</a></li>
+                  <li class="header__subitem"><a class="header__sublink" href="#">SEO-продвижение</a></li>
+                  <li class="header__subitem"><a class="header__sublink" href="#">SMM-продвижение</a></li>
+                  <li class="header__subitem"><a class="header__sublink" href="#">Продвижение геосервисов</a></li>
+                </ul>
+              </li>
+              <li class="header__item"><a class="header__link" href="#">Контакты</a>
+              </li>
+            </ul><a class="ui-button header__ui-button ui-button--blue" href="#section-form" onclick="window.toggleBurger()">👉 Оставить заявку</a>
+            <div class="socials header__socials"><a class="socials__item" href="#">
+                <svg class="svg svg--icon_dzen">
+                  <use xlink:href="images/sprite.svg#icon_dzen"></use>
+                </svg></a><a class="socials__item" href="#">
+                <svg class="svg svg--icon_tg">
+                  <use xlink:href="images/sprite.svg#icon_tg"></use>
+                </svg></a><a class="socials__item" href="#">
+                <svg class="svg svg--icon_vk">
+                  <use xlink:href="images/sprite.svg#icon_vk"></use>
+                </svg></a><a class="socials__item" href="#">
+                <svg class="svg svg--icon_yt">
+                  <use xlink:href="images/sprite.svg#icon_yt"></use>
+                </svg></a>
+            </div>
+          </div><a class="header__wa" href="#"><img class="header__wa-fall" src="images/icon_wa-color.svg" alt=""><img class="header__wa-icon" src="images/icon_wa-color.svg" alt="">Связаться в&nbsp;WhatsApp</a>
+          <button class="header__burger-button" onclick="window.toggleBurger()"><span></span><span></span><span></span></button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="inner">
+            <div class="banner banner--case banner--m-pb0">
+              <div class="banner__content">
+                <h1 class="ui-h1 banner__ui-h1 ui-h1--bold">Клиника стоматологии<span class="banner__dot">.</span>
+                </h1>
+                <div class="banner__desc">Пусть наши работы говорят вместо нас</div>
+              </div>
+              <div class="banner__pic">
+                <div class="banner__mockups banner__mockups--bg-blue">
+                  <div class="banner__mockup"><img src="images/banner_case-3.png" alt=""/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg section--mt0">
+          <section class="section">
+            <div class="inner">
+              <div class="section-head section-head--max-w-xxxxxs section-head--t-flex section-head--bb">
+                <h2 class="ui-h2 section-head__ui-h2">Описание <br> проекта
+                </h2>
+                <div class="tags">
+                  <div class="tags__item">
+                    <div class="ui-p1">Продажа товаров
+                    </div>
+                  </div>
+                  <div class="tags__item">
+                    <div class="ui-p1">Интернет магазин
+                    </div>
+                  </div>
+                  <div class="tags__item">
+                    <div class="ui-p1">UX/UI
+                    </div>
+                  </div>
+                  <div class="tags__item">
+                    <div class="ui-p1">Сайт под ключ
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case-desc">
+                <div class="case-desc__item">
+                  <h3 class="ui-h3 case-desc__ui-h3">Цель
+                  </h3>
+                  <div class="case-desc__text case-desc__max-h">
+                    <div class="ui-p1 ui-p1--medium">Клиент - магазин строительных инструментов, оборудования и запчастей. Главной задачей было сделать удобный интернет магазин с большим выбором товаров, удобным каталогом и личным кабинетом. Также была продумана удобная система выгрузки товара на сайт для владельца сайта. Это оптимизировало и ускорило процесс выгрузки новых товаров.
+                    </div>
+                  </div>
+                  <div class="case-desc__more">
+                    <div class="ui-p1 ui-p1--medium">Показать еще
+                    </div>
+                    <button class="ui-switch-button case-desc__ui-switch-button">
+                    </button>
+                  </div>
+                </div>
+                <div class="case-desc__item">
+                  <h3 class="ui-h3 case-desc__ui-h3">Задачи
+                  </h3>
+                  <div class="case-desc__text case-desc__max-h">
+                    <div class="ui-p1 ui-p1--medium">
+                      <ol>
+                        <li>Анализ конкурентов</li>
+                        <li>Визуальное исследование (мудборд и референсы);</li>
+                        <li>Построение прототипа;</li>
+                        <li>Определение общей визуальной концепции;</li>
+                        <li>Создание всех страниц сайта;</li>
+                        <li>Разработка и тестирование разных вариантов корзины и личного кабинета;</li>
+                        <li>Разработка интерфейса системы выгрузки новых товаров на сайт;</li>
+                        <li>Детальная прорисовка всех элементом интерфейсов, ховеров и модальных окон;</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                        <li>Подготовка дизайн к сдаче на верстку</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="case-desc__more">
+                    <div class="ui-p1 ui-p1--medium">Показать еще
+                    </div>
+                    <button class="ui-switch-button case-desc__ui-switch-button">
+                    </button>
+                  </div>
+                </div>
+                <div class="case-desc__item case-desc__item--l-row-span2">
+                  <h3 class="ui-h3 case-desc__ui-h3">Решение
+                  </h3>
+                  <div class="case-desc__text case-desc__max-h case-desc__max-h--l-xl">
+                    <div class="ui-p1 ui-p1--medium">
+                      <p>После анализа конкурентов и выбора референсов мы принялись к разработке главной страницы. Она содержит предложение актуальных товаров, фильтр товаров, поиск, информацию про акции, актуальные новости.</p>
+                      <p>Для удобной навигации и поиска товаров по сайту мы вывели актуальные товары в предложенных, а также разместили фильтр товаров с категориями.</p>
+                      <p>Подготовили баннеры под актуальные скидки и акции.</p>
+                      <p>Разработали личный кабинет и корзину.</p>
+                      <p>Также большое внимание было уделено разработке мобильной версии. Исходя из аналитики мы выяснили, что большая часть трафика идет с мобильных устройств, поэтому большой упор делали на разработку мобильной версии, чтобы посетитель мог легко найти нужный товар и заказать его. На сайте используется много оригинальных решений и разработок для формирования правильного технологического визуального образа и поддержания функционала.</p>
+                      <p>На сайте используется много оригинальных решений и разработок для формирования правильного технологического визуального образа и поддержания функционала.</p>
+                      <p>На сайте используется много оригинальных решений и разработок для формирования правильного технологического визуального образа и поддержания функционала.</p>
+                      <p>На сайте используется много оригинальных решений и разработок для формирования правильного технологического визуального образа и поддержания функционала.</p>
+                    </div>
+                  </div>
+                  <div class="case-desc__more">
+                    <div class="ui-p1 ui-p1--medium">Показать еще
+                    </div>
+                    <button class="ui-switch-button case-desc__ui-switch-button">
+                    </button>
+                  </div>
+                  <div class="tags case-desc__tags">
+                    <div class="tags__item tags__item--bg-blue">
+                      <div class="ui-p1">2000 руб. за лид
+                      </div>
+                    </div>
+                    <div class="tags__item">
+                      <div class="ui-p1">Конверсия +1,18%
+                      </div>
+                    </div>
+                    <div class="tags__item">
+                      <div class="ui-p1">Цена -40%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="inner">
+              <div class="swipe swipe--label-top swipe--bg-dark-blue">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swipe__slide swiper-slide">
+                      <div class="swipe__label">
+                        <h4 class="ui-h4 ui-h4--bold">Анализируемый период за сентябрь:
+                        </h4>
+                      </div>
+                      <div class="swipe__main">
+                        <div class="swipe__row">
+                          <div class="swipe__img swipe__img--s"><img src="images/swipe_img_case_3.jpg" alt=""/></div>
+                          <div class="swipe__img swipe__img--s"><img src="images/swipe_img_case_3.jpg" alt=""/></div>
+                        </div>
+                        <div class="swipe__row">
+                          <div class="swipe__img swipe__img--xs"><img src="images/swipe_img_case_4.jpg" alt=""/></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-swiper-scrollbar ui-swiper-scrollbar--light">
+                  <div class="swiper-scrollbar">
+                  </div>
+                </div>
+              </div>
+              <div class="section section--mt-xxxs section--text-grid section--l-first-clm-s text-grey">
+                <div class="ui-p1 ui-p1--medium">В настоящее время клиент доволен результатом проделанной работы, продолжаем сотрудничество, с первого месяца работы стоимость лида уже была лучше, чем в прошлой рекламной кампании, также мы улучшали наши показатели из периода в период.
+                </div>
+                <div class="ui-p1 ui-p1--medium">В&nbsp;наши дальнейшие планы входит проведение соответствующих работ по&nbsp;ещё большему улучшению показателей, за&nbsp;счет оптимизации кампаний, расширения ключевых запросов, рекламных инструментов и&nbsp;работы с&nbsp;системами аналитики. Это хороший пример, для чего нужно оставлять проект на&nbsp;сопровождении, если этим будут заниматься грамотные специалисты, то&nbsp;результат себя окупит.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="inner">
+              <div class="section-head">
+                <h2 class="ui-h2 section-head__ui-h2 ui-h2--bold">Похожие проекты
+                </h2>
+              </div>
+              <div class="cases"><a class="cases-item cases-item--on-dark-bg" href="#">
+                  <div class="cases-item__head">
+                    <div class="popover cases-item__popover popover--pd-l">Смотреть проект
+                    </div>
+                    <div class="cases-item__img"><img src="images/cases_item_img.jpg" alt=""/></div>
+                    <div class="cases-item__tag">Сайт</div>
+                  </div>
+                  <div class="cases-item__content">
+                    <h3 class="ui-h3 cases-item__ui-h3 ui-h3--bold">Компания “Volvo”
+                    </h3>
+                    <div class="ui-p1 ui-p1--medium text-body">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
+                    </div>
+                  </div></a><a class="cases-item cases-item--on-dark-bg" href="#">
+                  <div class="cases-item__head">
+                    <div class="popover cases-item__popover popover--pd-l">Смотреть проект
+                    </div>
+                    <div class="cases-item__img"><img src="images/cases_item_img.jpg" alt=""/></div>
+                    <div class="cases-item__tag">Сайт</div>
+                  </div>
+                  <div class="cases-item__content">
+                    <h3 class="ui-h3 cases-item__ui-h3 ui-h3--bold">Компания “Volvo”
+                    </h3>
+                    <div class="ui-p1 ui-p1--medium text-body">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
+                    </div>
+                  </div></a>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="section section--ov-hidden">
+          <div class="inner">
+            <div class="section-head section-head--t-flex __section-head section-head--w-items-l">
+              <h2 class="ui-h2 section-head__ui-h2 ui-h2--bold">Наша команда
+              </h2>
+              <div class="ui-p1 section-head__ui-p1 text-body">В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!
+              </div>
+            </div>
+            <div class="team">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_andrew.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Андрей, директор
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_vlad_marketing.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Влад, маркетинг
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_anastasia.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Анастасия, контекст
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_sergei_context_1.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Сергей, контекст
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_sergei_context_2.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Сергей, контекст
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_vlad_development.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Влад, разработка
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_vera.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Вера, дизайнер
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_wiki.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Вика, контекст
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_ivan.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Иван, работа с клиентами
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_vlad_target.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Влад, таргет
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_sergey_designer.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Сергей, дизайнер
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                  <div class="team__item swiper-slide">
+                    <div class="team__img">
+                      <div class="team__photo"><img src="images/team_img_ira.jpg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="popover team__popover popover--arrow">Ира, контекст
+                    </div>
+                    <div class="team__experience">18 лет в digital</div>
+                  </div>
+                </div>
+                <div class="ui-swiper-scrollbar">
+                  <div class="swiper-scrollbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="inner">
+            <div class="section-head">
+              <h2 class="ui-h2 ui-h2--bold">О компании
+              </h2>
+            </div>
+            <div class="about-nums">
+              <div class="about-nums__item">
+                <div class="about-nums__value">25<span class="text-blue">+</span></div>
+                <div class="ui-p1 about-nums__ui-p1">сертифицированных специалистов в&nbsp;команде
+                </div>
+              </div>
+              <div class="about-nums__item">
+                <div class="about-nums__value">9<span class="text-blue">+</span></div>
+                <div class="ui-p1 about-nums__ui-p1">лет опыта в&nbsp;сфере digital
+                </div>
+              </div>
+              <div class="about-nums__item">
+                <div class="about-nums__value">250<span class="text-blue">+</span></div>
+                <div class="ui-p1 about-nums__ui-p1">проектов реализовано и&nbsp;запущено
+                </div>
+              </div>
+              <div class="about-nums__item">
+                <div class="about-nums__value">40<span class="text-blue">+</span></div>
+                <div class="ui-p1 about-nums__ui-p1">сертификатов по&nbsp;разным направлениям
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="inner">
+            <div class="section-head">
+              <h2 class="ui-h2 ui-h2--bold">Сертифицированные  <br>специалисты
+              </h2>
+            </div>
+            <div class="certified"><a class="certified__item" href="#">
+                <div class="certified__icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABWCAYAAABl2nDWAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA20SURBVHgB7Z0JeFTVFcfPvS8zCQmUvSEh6EBSSwJaIZOwBhMUhdaFqiSIS3H5PnBFK4tYqmgVKdaFUkU+PpeiJRAWW9S2QDFAYgiQIIJOEgiZCYYMmUQMCdnmzbu3500kZJt5b9bMoL8PmDcz5y33/87dzj1vAPgJlyAQAERFRYXzXn1GCTxkuET4IAKkL16YFr/i+KeFE/49XqoFOKsQ66CkpqakHnoIvws2IC7uZxpRqxcozMC3k4HCL1CWgS4dhMB3uE8xJ7AXGOyMEKyHSktLW8AP+EWwqKirBvEw4deEkNnA+U34SsGLcM6bsCC70BM3XGiBffVnir8DH+FTwYbGjZzAOX0SN2egR/QBv8DrCSeZNiL8rars+HHwMj4RbEhswgzK4VmQq1zPge0fZNu49JTFWHIMvIRXBYuJTYhjnL/FOdzg7WrnNpwz7ET+gf8sM5cZToOHeEWwyMjICBox4CW8sPn4NgwCEysH/oytvmZ9dXX1BXATjwWLGjZaDxr2Nh4oCYKDPZzZHjObThSDG3gkWNTw+HsJJW+4PCzoeU5LjGdUmYrywUVCwA0SExM1lbWNz2FvtMzetAYZOAzZjWIdBDdwWTCdThdm/r7xPWyvZkMQgvf3HbGeLW7ddB2XqmRcXFxoI9Nuws2ZEIxweLXSaFgC4H69cKXrFy4w7TvwIxZLRrVgUSMS/oTGcyEYYfC8GrEGXRkfBQoIoALsDR/CgeifIUCiG67BV1Uai54DBbGiY0dNEghO5AcOrrhwrtrgyE5RgCFXxCXQEO0R3AyFIALVsWE0Y+nZU4a/KNnGjBh1BwOeBa01roZa+cSKiqKT3dk69TC5R2RCWB5uDoKggy07W1b0qpLVkBHxv0G3+RAuzVDCmUBG94sIzaqrq7N1tnfahrVArxX4ooMgQvYsxmGhuaz4FVCohkOHJ6RTIDs6R1Kw2qVJ2j7zutvHYZUcEpeQIDDIwTMOgCCCM1hgNhnWgFKbpYvPAIGsdxJ2OmeV+Oia8iJz+w8dehhlfH0wiWVvswAeRrH+CgpixejiFwAlmQoxugEagazu/GG3HjYkdlQa5fxzCBJQHRHnOw+ajUUfKtni8Gg+FvptUNPjc2gQGaRUlxu+vPhRtx6GYi2DIKFVLOkBNWJFx8YvUi0W2K0iNAI81/GjTkTFjkwknB6G4BhzNXKJ32MuL/pYyRDFWgycrATXy9Vi1UgjakpKKuU3XTyMcroEgkAs2bMYITerEWvo8JEvuymWTGioKCy++KaDYJGR10TghdwCgQ62LRg9nXn21DfZSqbRIxJe4IQuBQ+cgAHckZqaao/sdBCMhtlug8ANMf8AqcUCTMVB6b+dmmEBo4cnyANXuQ3yqMbgzkOLTWftCzodBCMCnwuBzQVcZLnprNFwSMkwutzyCpb0afAOhApkjrzRJlhCQgIuzZMUCFCwqbAwG4xXEiu11bNWo1gLwZttMSfT5Ze2iOv5Jls8kJBArY4XKCc3njn9zTdKhidOW95BmR4A7xPTOy5ucJtgnGgmeRhb8wl2z5Kk8VXlJUZndrJnlZy2yFOiB8E3kN6gTbvUhnFpIgQY2BOaJNE6UUmsqKjE8JPlFlxngPngQwiDMW2CESKMhgACV88rOONplm9LTzmzk1ewSFjjexj7uhd8f1VXX6qSwIYGynjV7lk28QYUy+TMTvYsc23jR3i3fwt+gHAY1k4wexJbj4NiHRdFNr3m29JKZ3b9dLp+hDZtw8Z3KvgJ1Ki3XbCYmJheOBjUQA+DC6wnRJssVolTseQZCRXEj7EEqeBPCPSyCyZJ4RE97138WINI0uoqSs45sxqCXTthtk9x1T0Z/AxWSa290Re1Qg97Fz9mlWB6XYXhnJIlYdq38Ob6XazWkwO1CxbSItqgh8Bx1uEGW0hq51CwIyTe9LjcKUDPwFsFCxnsdr6Uh+SEssYp508f/17tDhajsUrizeNx8wj4H9EuWEXFgSZ8sYIfwXHWzkamvdVkMjWDi8iiNVNrmpxJDf6lvt1IH/yX+87JrlDeOLPWdLQW3ORcaSkuGjal4sHywE9gU3D+kmAEzoI/4LCjkWsylDxr3Lb8mNH/yo90ZtPqaeIMdNcD4AcwdF/dJhg2vgbwOXyTljdmKHnWtZnZOibZDvZqseUnZhX0dWYre1qzIGLohX0BPgY97ES7ACLx9V36oLKs6C4lz0rMyrtaI2gKcTMa/+oobz4qC+hsH1m0cGq7ngD/DHwIjv0OtAkmSZLL+Z4u8EE4tSpGEpK351xFibQT2i8gE9ChgNkJWdlDnO0rPzrTRMU5OFvYBT7CxqyHLkUrmrVy8r/XA2J4wLWVZYb7lZ4Fkj2L29DLOekuR0sXAdoDajytfy9yC540C7wMlqPKcvpkWZtgVVXHGvDTHPAieJLXI6j1KSW7MZs+/xUBaT84TU3gdk9L3Jo30tmxDAaD1aqVHsJhi+LCrisQ1poJ0HFdkvDN4D1WmssMTyt51tjMvSkC0WQTIP1AGR1lUr6Sp+Gia73ZaLgPN98DL4EN/t/l1w6CWTVMviseP0aHd3cFVsOlSnZjt+SmCFTYRQjpD6ohfTVUm6/fmjdGybJfGDwsZ02Dh8hTseiBEV09TL4z+O1/wRMYex7v7h+UzPTbcm+lnO/A4J/rCy+ERxKJ7VUSTa6e6OUei4aT/T2FhYWivN0lVYBx9ia42/ijWJWm4heVzPTbDtxKJL5ZZTXsHgI/w2P8J2lLnuJaRP8wWCBnUYObSBCy+tJpu0KjYxMK8ASKLt8BDk9UGu2JbE6RPUsWC0/tnSU9DnUShqiPpE9STM/C9cpVWOJF4AIYA9t3xmhIvfi+u3QnXFxmL4FrR12iRqzkzTl3qRYLhQA1oKcJwP6p37Z/kpIpXuNiFz2NiYw92/6DbvPDzGXF2/HAX4IyjeiwD1aeKlqlZJi8NXc+J2SjSs86I9n4VLx1KhdkSR8i0T3Jm3JmKVnKomGnpNjGth6Wf2IpL+4wuXeYsmljwqO4RwM4RXq8sqxEseuWxWKMvwnq+FZgwrQjd6cUHp6d8j7ndA4uoanpuUM5Je+O3bxXMfsIO6UVEoDzXlzOPmwhCzt/7FAwS/nxA1g1tzn4uhHv/mw1Yum35D3JGazFBl4xzx+nNZVMYDPzZ08ouvhZQcbETMLYQ6COPgIJ2Zq0Ked+JcOqMsNKOdva0fc4lHijusJQ2vlzp2nnEYKI4WDoEjqWs/4qTUWKg9zkrC9+D5ytBDVwOINDjKmFd0zpEkk9nDHlIwpslkpP0wIlq/WZOYoLu2eNhtfw+p6ATqMC7Am/xrJ32447FQxH6XWMSPfg5sUGuIEzNl1N1l9SVu4LeJdeI+qeIDmDYlxfkD65xJHBwfQpW7HH+h1uqgk69iEC2ZC8OVdxwl9pLF6D534YVWoN03OoFbntHkczFMWHs6pOlXzOCV+Fha/GKnq72VS8U2kfWSyAjsm0juFlTEOucybWRQ6nT95s4+IsrLqq1iCwk1mdlLVvgZKd+ZRhHZZtLtiTDckyi/HEV45sVS9HRl05Ot5c/nWRkl3SltwX8S79EVSA8atyK9VMO3rn+JPgAvot+bcRbvsAN1UOfNkjh9OnrFWyUlNGr67fuiIWNhqnKGimHUofZwQ3SNq4/zoSQj/F4/RWtibyLwosQy92e7TfdiTwAonrdoSTfn3XECKoHTeZWkJg3LHbJ1nAA/SZ2akghGRhDzxYjT22VSsKZk1WNwZzgFcES87KXYN3+jH1e/AT2L54JNalQ8EVWIgr1JvLnpbyMriJR4K1elZ/9CziixRJn4Hjr1cKMyY/68auLj3z3QUyYGDQiSVDCSzFKMcKcAO3PCxxR0E4bW6Wf10g8B+CcApZezh90iMu7QEu0ipW03bc9Sa4DMCJ+IaCjMlzQWUM0CXBrtm5MyL0fPi2y0Wsi+BAeF1jjW2h4dE0xQGx6jZsTNb+wdq63peNZ7UH2+F5EYM18iKHogOp8jDZs7S1EdmEBM0vOLnLJw3V4hxnnqboYdds+OLnoT8OsWRuCR+s2W4f4jrAqYclrivAcVZTAbpsPPyoIDsboO+dhvTRXTzNqYcVztM3UUL2oOI9ltLpdwjYsMz7DLNGNXT/tQowRJKB2uLangfLYkEBMVEG8w7OnuQwoUX1sEK/9dAIwqwf4eYEuAzBQdhuKRTmfnnbZKfPCLg8cE3KynuGA1tOguy3eBzDaygVlhy8c6KqPAy3pkZJmfuGAaUvgP2BKOLWzwL2OATqMYC5UeLNSwrTp51Xv5sH6Dfn3EApWYTTi2meHsuP4MAetgpcfP3g7DSXkwg9L+Ty5TTplzemgSAt4kCnkR9y/wMP3syBfCYAf/NgekouuIkXn4nmJHFTbjIV7I8PpwdOj0rO4wr2+hCRvnvgrgklOA/yKMvSJ9VI93522KBewkwMPN2HlzcRL7Iv+BM5L4OSHYRLmywNw/aY7h/u8sMTjvB5u5O4u6AvqW1JxRNNJZyPw3Wsa73ew2IDjm7zFeGkEI+/G0aE7irU60XwAX5vqMdt/F+kRMPGYmcRL3EWi9OuOGz3dNi+6H74Xxocgq21iN5ajnZF+OYEo7QcwFYiCiFHPV1QUUvg9GzLOU0du3dASzP0s4G2Ny6patAjOdEwK2e8XivW1+befbPqh7h+IkD4P+qcpyvsPEZcAAAAAElFTkSuQmCC" alt=""/></div>
+                <div class="certified__text">
+                  <h4 class="ui-h4 certified__ui-h4 ui-h4--bold">Официальные партнеры Cаlltouch
+                  </h4>
+                  <button class="ui-button certified__ui-button ui-button--text ui-button--medium">Посмотреть сертификат
+                    <svg class="svg svg--icon_arrow_next">
+                      <use xlink:href="images/sprite.svg#icon_arrow_next"></use>
+                    </svg>
+                  </button>
+                </div></a><a class="certified__item" href="#">
+                <div class="certified__icon"><img src="images/certified_ya.png" alt=""/></div>
+                <div class="certified__text">
+                  <h4 class="ui-h4 certified__ui-h4 ui-h4--bold">Сертифицированное агенство Яндекс. Директ
+                  </h4>
+                  <button class="ui-button certified__ui-button ui-button--text ui-button--medium">Посмотреть сертификат
+                    <svg class="svg svg--icon_arrow_next">
+                      <use xlink:href="images/sprite.svg#icon_arrow_next"></use>
+                    </svg>
+                  </button>
+                </div></a><a class="certified__item" href="#">
+                <div class="certified__icon"><img src="data:image/png;base64,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" alt=""/></div>
+                <div class="certified__text">
+                  <h4 class="ui-h4 certified__ui-h4 ui-h4--bold">Сертифицированное агентство VK реклама 
+                  </h4>
+                  <button class="ui-button certified__ui-button ui-button--text ui-button--medium">Посмотреть сертификат
+                    <svg class="svg svg--icon_arrow_next">
+                      <use xlink:href="images/sprite.svg#icon_arrow_next"></use>
+                    </svg>
+                  </button>
+                </div></a>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg">
+          <section class="section">
+            <div class="inner">
+              <div class="section-head section-head--t-flex section-head--bb">
+                <h2 class="ui-h2 section-head__ui-h2 ui-h2--bold">Этапы запуска вашего проекта
+                </h2>
+                <div class="ui-p1 section-head__ui-p1 text-grey">Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!
+                </div>
+              </div>
+              <div class="stages">
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">01
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Знакомство
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Знакомство с&nbsp;вами и&nbsp;проектом
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">02
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Оформление
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Составление и&nbsp;согласование сметы
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">03
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Договор
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Подписание договора
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">04
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Оплата
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Полная или&nbsp;частичная оплата за&nbsp;проект
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">05
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Подготовка
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Обсуждение технического задания, анализ конкурентов
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">06
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Начало работы
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Настройка и&nbsp;запуск рекламных кампаний, разработка страниц
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">07
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Оптимизация
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Анализ рекламных кампаний и&nbsp;посадочных страниц, внесение правок
+                  </div>
+                </div>
+                <div class="stages__item">
+                  <div class="ui-h4 ui-h4--bold stages__count">08
+                  </div>
+                  <h4 class="ui-h4 stages__ui-h4 ui-h4--bold">Результат
+                  </h4>
+                  <div class="ui-p1 stages__ui-p1">Стремление к&nbsp;прогнозируемому KPI
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section--ov-hidden">
+            <section class="section">
+              <div class="inner">
+                <div class="section-head section-head--t-flex text-center text-center--t-left">
+                  <h2 class="ui-h2 section-head__ui-h2 ui-h2--bold">Наши клиенты
+                  </h2>
+                  <div class="ui-p1 section-head__ui-p1 text-grey">Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами
+                  </div>
+                </div>
+                <div class="clients" id="clients">
+                  <div class="clients__wrapper">
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_vkusvill.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_volkswagen.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_partnerdevice.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_vyborstroi.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_vksm.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_svyatnyh.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_audi.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_mazda.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="images/logo_hyundai.svg" alt=""/></div>
+                    <div class="clients__item" data-hidden="false"><img src="data:image/png;base64,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" alt=""/></div>
+                    <div class="clients__item block-none block-none--bf-mobile" data-hidden="true"><img src="images/logo_haval.svg" alt=""/></div>
+                    <div class="clients__item block-none block-none--bf-mobile" data-hidden="true"><img src="images/logo_vmu.png" alt=""/></div>
+                    <div class="clients__item block-none block-none--bf-mobile" data-hidden="true"><img src="images/logo_jeep.svg" alt=""/></div>
+                    <div class="clients__item block-none block-none--bf-mobile" data-hidden="true"><img src="images/logo_skoda.svg" alt=""/></div>
+                    <div class="clients__item block-none block-none--bf-mobile" data-hidden="true"><img src="images/logo_bogdashamilk.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="section section--mt-xxxs block-none block-none--mobile text-center">
+                  <button class="ui-button ui-button--outline ui-button--w100 ui-button--min-w ui-button--px-xl" onclick="toggleHidden(this, '#clients')" data-text-start="Смотреть все" data-text-end="Свернуть">Смотреть все
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section class="section">
+              <div class="many-clients">
+                <div class="inner">
+                  <div class="many-clients__title">Более 250 компаний <br>по&nbsp;всей России и&nbsp;за&nbsp;ее&nbsp;пределами</div>
+                </div>
+                <div class="many-clients__img"><img src="images/many_clients_img.png" alt=""/></div>
+              </div>
+            </section>
+            <section class="section" id="section-form">
+              <div class="inner">
+                <div class="connection">
+                  <h2 class="ui-h2 connection__ui-h2 ui-h2--bold">Время обсудить ваш проект
+                  </h2>
+                  <form class="form connection__form">
+                    <h4 class="ui-h4 form__ui-h4 ui-h4--bold block-none block-none--bf-tablet">Свяжитесь с нами!
+                    </h4>
+                    <div class="form__section">
+                      <div class="form__fields">
+                        <div class="ui-input">
+                          <div class="ui-input__controls">
+                            <input id="tel" type="text" placeholder="Телефон"/>
+                          </div>
+                          <div class="ui-input__error block-fade-in active">Поле заполнено некорректно</div>
+                        </div>
+                        <div class="ui-input">
+                          <div class="ui-input__controls">
+                            <input id="name" type="text" placeholder="Имя"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__section">
+                      <h6 class="ui-h6 form__ui-h6 ui-h6--bold">Выберите услугу:
+                      </h6>
+                      <div class="form__options">
+                        <div class="ui-choice">
+                          <input id="web-dev" type="checkbox"/>
+                          <label for="web-dev">Web-разработка</label>
+                        </div>
+                        <div class="ui-choice">
+                          <input id="seo" type="checkbox"/>
+                          <label for="seo">SEO продвижение</label>
+                        </div>
+                        <div class="ui-choice">
+                          <input id="quiz-bot" type="checkbox"/>
+                          <label for="quiz-bot">Quiz bot</label>
+                        </div>
+                        <div class="ui-choice">
+                          <input id="context-ads" type="checkbox"/>
+                          <label for="context-ads">Контекстная реклама</label>
+                        </div>
+                        <div class="ui-choice">
+                          <input id="target-ads" type="checkbox"/>
+                          <label for="target-ads">Таргетированная реклама</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__section">
+                      <button class="ui-button ui-button--blue ui-button--w100" type="submit">👉 Отправить
+                      </button>
+                      <div class="form__fn">Нажимая кнопку отправить, вы соглашаетесь с&nbsp;<a href="#" target="_blank">политикой конфиденциальности</a></div>
+                    </div>
+                  </form>
+                  <div class="contacts-list connection__contacts-list">
+                    <div class="contacts-list__item">
+                      <div class="contacts-list__icon">
+                        <svg class="svg svg--icon_map">
+                          <use xlink:href="images/sprite.svg#icon_map"></use>
+                        </svg>
+                      </div>
+                      <div class="contacts-list__name">Россия, г. Ворорнеж</div>
+                      <div class="ui-p1 contacts-list__ui-p1">г. Воронеж, улица Революции 1905г., 82А
+                      </div>
+                    </div>
+                    <div class="contacts-list__item">
+                      <div class="contacts-list__icon">
+                        <svg class="svg svg--icon_map">
+                          <use xlink:href="images/sprite.svg#icon_map"></use>
+                        </svg>
+                      </div>
+                      <div class="contacts-list__name">Россия, г. Сочи</div>
+                      <div class="ui-p1 contacts-list__ui-p1">г. Сочи, улица Виноградная 12
+                      </div>
+                    </div>
+                    <div class="contacts-list__item">
+                      <div class="contacts-list__icon">
+                        <svg class="svg svg--icon_email">
+                          <use xlink:href="images/sprite.svg#icon_email"></use>
+                        </svg>
+                      </div>
+                      <div class="contacts-list__name">Email:</div>
+                      <div class="ui-p1 contacts-list__ui-p1"><a href="mailto:ag@oromo01.ru">ag@oromo01.ru</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+        <div class="popup" id="popup-thx">
+          <div class="popup__content">
+            <button class="popup__close" type="button">
+              <svg class="svg svg--icon_cross">
+                <use xlink:href="images/sprite.svg#icon_cross"></use>
+              </svg>
+            </button>
+            <div class="form-thx">
+              <svg class="svg svg--icon_check">
+                <use xlink:href="images/sprite.svg#icon_check"></use>
+              </svg>
+              <h4 class="ui-h4 form-thx__ui-h4 ui-h4--bold">Спасибо, ваша заявка принята!
+              </h4>
+              <div class="ui-p1 form-thx__ui-p1">Ожидайте звонка нашего менеджера
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="inner"><a class="footer__logo" href="/">
+                <svg class="svg svg--icon_logo">
+                  <use xlink:href="images/sprite.svg#icon_logo"></use>
+                </svg></a>
+              <ul class="footer__menu">
+                <li class="footer__item"><a class="footer__link" href="/">Главная</a>
+                </li>
+                <li class="footer__item"><a class="footer__link" href="#">О нас</a>
+                </li>
+                <li class="footer__item">
+                  <div class="footer__link footer__link--arrow">Услуги
+                    <svg class="svg svg--menu-arrow">
+                      <use xlink:href="images/sprite.svg#menu-arrow"></use>
+                    </svg>
+                  </div>
+                  <ul class="footer__submenu">
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">Web-разработка</a></li>
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">Контекстная реклама</a></li>
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">Таргетированная реклама</a></li>
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">SEO-продвижение</a></li>
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">SMM-продвижение</a></li>
+                    <li class="footer__subitem"><a class="footer__sublink" href="#">Продвижение геосервисов</a></li>
+                  </ul>
+                </li>
+                <li class="footer__item"><a class="footer__link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="socials footer__socials socials--s socials--dark"><a class="socials__item" href="#">
+                  <svg class="svg svg--icon_dzen">
+                    <use xlink:href="images/sprite.svg#icon_dzen"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg class="svg svg--icon_tg">
+                    <use xlink:href="images/sprite.svg#icon_tg"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg class="svg svg--icon_vk">
+                    <use xlink:href="images/sprite.svg#icon_vk"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg class="svg svg--icon_yt">
+                    <use xlink:href="images/sprite.svg#icon_yt"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bot">
+            <div class="inner">
+              <div class="footer__copy">© 2023 Generation</div>
+              <div class="footer__links"><a href="#">Пользовательское соглашение</a><a href="#">Политика конфиденциальности</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loader">
+        <div class="loader__slide"></div>
+        <div class="loader__title">Привет!</div>
+      </div>
+    </div>
+    <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="libs/lenis/lenis.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="libs/chart.js/chart.min.js"></script>
+    
+  </body>
+</html>

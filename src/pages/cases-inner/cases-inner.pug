@@ -1,0 +1,83 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'cases-inner'
+    const pageTitle = 'Cases inner'
+
+  -
+    const swipeItems ={
+      label: 'Компания Партнер',
+      rows: [
+        { imgs: [
+            { img: 'swipe_img_case_1.png' },
+            { img: 'swipe_img_case_2.png' },
+            { img: 'swipe_img_case_1.png' },
+            { img: 'swipe_img_case_1.png' },
+          ]
+        },
+      ]
+    }
+
+block content
+  main.main
+    +section
+      .inner
+        +banner
+    +section('--bg, --mt0')
+      +section
+        .inner
+          +section-head('--max-w-xxxxxs, --t-flex, --bb')
+            +ui-h2('Описание <br> проекта', 'section-head')
+            +tags([{text: 'Продажа товаров'},{text: 'Интернет магазин'},{text: 'UX/UI'},{text: 'Сайт под ключ'}])
+          +case-desc
+      +section
+        .inner
+          +swipe(swipeItems)
+          +section('--mt-xxxs, --text-grid', 'div').text-grey
+            +ui-p1('На&nbsp;главном экране расположен поиск товаров, слайдер с&nbsp;актуальными акциями и&nbsp;новыми товарами. А&nbsp;также навигационное меню, избранное, корзина и&nbsp;личный кабинет', '--medium')
+            +ui-p1('Для удобства пользователя мы&nbsp;вывели таб меню с&nbsp;рекомендуемыми товарами. Ниже расположили слайдеры с&nbsp;актуальными ценами и&nbsp;фильтр с&nbsp;категориями.', '--medium')
+      +section
+        .inner
+          +section-head
+            +ui-h2('Похожие проекты', 'section-head, --bold')
+          +cases
+    +section('--ov-hidden')
+      .inner
+        +section-head('--t-flex, , --w-items-l')
+          +ui-h2('Наша команда', 'section-head, --bold')
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+        +team
+    +section
+      .inner
+        +section-head
+          +ui-h2('О компании', '--bold')
+        +about-nums
+    +section
+      .inner
+        +section-head
+          +ui-h2('Сертифицированные  <br>специалисты', '--bold')
+        +certified
+    +section('--bg')
+      +section
+        .inner
+          +section-head('--t-flex, --bb')
+            +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+          +stages
+      +section('--ov-hidden')
+        +section
+          .inner
+            +section-head('--t-flex').text-center.text-center--t-left
+              +ui-h2('Наши клиенты', 'section-head, --bold')
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+            +clients#clients
+            +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
+              +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')
+        +section
+          +many-clients
+        +section#section-form
+          .inner
+            +connection
+    +popup#popup-thx
+      +form-thx

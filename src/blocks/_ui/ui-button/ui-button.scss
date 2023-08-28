@@ -1,0 +1,94 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding: 19px 22px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: $fontInt;
+  color: $bg-white;
+  background: $secondary6;
+  border: 1px solid $secondary6;
+  border-radius: 7px;
+  transition: $transitionDuration;
+  white-space: nowrap;
+  cursor: pointer;
+  @include media-tablet {
+    padding: 19px 34px;
+  }
+  @include media-hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  .svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+  &--text {
+    padding: 0;
+    font-size: 16px;
+    line-height: 148.5%;
+    color: $body-text;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    @include media-hover {
+      transform: none;
+      color: $body-text;
+      background: transparent;
+    }
+    &.ui-button {
+      &--medium {
+        font-weight: 500;
+      }
+    }
+  }
+  &--blue {
+    color: $white;
+    background: $blue;
+    border-color: $blue;
+  }
+  &--white {
+    color: $main-color;
+    background: $bg-white;
+    border-color: $bg-white;
+  }
+  &--w100 {
+    width: 100%;
+  }
+  &--min-w {
+    min-width: 220px;
+  }
+  &--px-xl {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  &--px-xs {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  &--outline {
+    color: $white;
+    background: transparent;
+    border-color: $white;
+    @include media-hover {
+      color: $main-color;
+      background: $white;
+      border-color: $white;
+    }
+  }
+  &--outline-grey {
+    color: $secondary6;
+    background: transparent;
+    border-color: $grey;
+    @include media-hover {
+      color: $bg-white;
+      background: $elements-group;
+      border-color: $elements-group;
+    }
+  }
+}

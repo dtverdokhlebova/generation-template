@@ -1,0 +1,53 @@
+:root {
+  --font-primary: 'Roboto Flex', 'Arial', sans-serif;
+  --font-secondary: 'Inter', 'Arial', sans-serif;
+
+  // colors
+  --white: #fff;
+  --black: #1f2e43;
+  --primary: #074df3;
+  --secondary1: #14192b;
+  --secondary2: #101010;
+  --secondary3: #fafafa;
+  --secondary4: #181818;
+  --secondary5: #dfdfdf;
+  --secondary6: #343434;
+  --body-text: #82848d;
+  --color-on-black-background: #bebebe;
+  --grey-icons: #f3f3f3;
+  --error: #D92222;
+
+
+  // other
+  --inner-pd: 20px;
+  --transition-duration: 0.3s;
+}
+
+$font: var(--font-primary);
+$fontInt: var(--font-secondary);
+
+// colors
+$white: var(--white);
+$black: var(--black);
+$blue: var(--primary);
+$grey: var(--color-on-black-background);
+$main-color: var(--secondary1);
+$bg: var(--secondary2);
+$bg-white: var(--secondary3);
+$elements-group: var(--secondary4);
+$border: var(--secondary5);
+$secondary6: var(--secondary6);
+$body-text: var(--body-text);
+$grey-icons: var(--grey-icons);
+$error: var(--error);
+
+
+// others
+$innerPd: var(--inner-pd);
+$transitionDuration: var(--transition-duration);
+
+// media
+$mediaWidthLaptop: 1359px;
+$mediaWidthTabletHorizotal: 1024px;
+$mediaWidthTablet: 768px;
+$mediaWidthMobile: 560px;

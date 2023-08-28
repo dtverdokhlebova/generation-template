@@ -1,0 +1,46 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  &__item {
+    display: flex;
+    width: 62px;
+    height: 55px;
+    flex-shrink: 0;
+    background: $grey-icons;
+    border-radius: 10px;
+    @include media-hover {
+      .svg {
+        transform: scale(1.2);
+      }
+    }
+    .svg {
+      max-width: 27px;
+      max-height: 18px;
+      margin: auto;
+      transition: $transitionDuration;
+    }
+  }
+  &--s {
+    .socials {
+      &__item {
+        width: 57px;
+        height: 53px;
+        @include media-laptop {
+          width: 62px;
+          height: 55px;
+        }
+      }
+    }
+  }
+  &--dark {
+    .socials {
+      &__item {
+        background: $elements-group;
+        .svg {
+          color: $white;
+        }
+      }
+    }
+  }
+}

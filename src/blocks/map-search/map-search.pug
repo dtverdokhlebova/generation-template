@@ -1,0 +1,28 @@
+mixin map-search(mods)
+  -
+    const baseName = 'map-search'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .map-search(class=allMods)&attributes(attributes)
+    .map-search__wrapper
+      .map-search__grid
+        .map-search__col
+          -for(let i=1; i<=8; i++)
+            .map-search__item: img(src=`../../images/map-search/map-search_${i}.png` alt='')
+        .map-search__col
+          -for(let i=5; i<=12; i++)
+            .map-search__item: img(src=`../../images/map-search/map-search_${i}.png` alt='')
+        .map-search__col
+          -for(let i=10; i<=17; i++)
+            .map-search__item: img(src=`../../images/map-search/map-search_${i}.png` alt='')
+    .map-search__content
+      +ui-h2('В каких нишах востребован поиск на картах', 'map-search, --bold')
+      .map-search__text Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,Текст, текст,
+    block

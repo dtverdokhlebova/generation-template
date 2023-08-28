@@ -1,0 +1,59 @@
+mixin contacts(mods)
+  -
+    const baseName = 'contacts'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const sliderItems =[
+      { title: 'Россия, г. Сочи',
+        descr: 'ул. Виноградная 20, БЦ "Виноград", офис 103',
+        phoneText: '+7 (928) 457-88-00',
+        phoneLink: '+79284578800',
+        lat: '43.585472',
+        lng: '39.723098'
+      },
+      { title: 'Россия, г. Воронеж',
+        descr: 'ул. Революции 1905 года, 82А ',
+        phoneText: '+7 (473) 205-25-00',
+        phoneLink: '+74732052500',
+        lat: '51.662848',
+        lng: '39.181512'
+      },
+    ]
+
+  .contacts(class=allMods)&attributes(attributes)
+    +ui-h2('Время обсудить ваш проект', 'contacts, --bold').block-none.block-none--laptop
+    +form('contacts, --light')
+    .contacts__content
+      +ui-h2('Время обсудить ваш проект', 'contacts, --bold').block-none.block-none--bf-laptop
+      .contacts__main
+        .contacts__map
+          .contacts__map-wrapper
+            .contacts__map-block(data-coords-lat='43.585472' data-coords-lng='39.723098' data-zoom='15')#contactsMapBlock
+          .contacts-slider
+            .swiper
+              .swiper-wrapper
+                each item, index in sliderItems
+                  .contacts-slider__item.swiper-slide(class=(index === 0 ? 'contacts-slider__item--active' : '') data-coords-lat=item.lat data-coords-lng=item.lng)
+                    +ui-h6(item.title, 'contacts-slider, --bold')
+                    +ui-p1(item.descr, 'contacts-slider')
+                    .contacts-slider__bottom
+                      a.contacts-slider__phone(href=`tel:${item.phoneLink}`)
+                        +svg('icon_phone')
+                        +ui-p1(item.phoneText)
+              +ui-swiper-scrollbar
+        .contacts__email
+          a.contacts__email-link(href='mailto:av@promo01.ru')
+            +ui-h6('Email: ', '--bold').contacts__email-label
+            .contacts__email-icon
+              img(src='../../images/icon_email.png', alt='')
+            +ui-p1('av@promo01.ru', '--medium')
+
+    block

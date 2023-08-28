@@ -1,0 +1,27 @@
+mixin why-maps(mods)
+  -
+    const baseName = 'why-maps'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items = [
+      { icon: 'why-maps-icon-1', title: 'Продвижение по&nbsp;запросам' },
+      { icon: 'why-maps-icon-2', title: 'Мониторинг рейтингов' },
+      { icon: 'why-maps-icon-3', title: 'Реакция на&nbsp;отзывы' },
+      { icon: 'why-maps-icon-4', title: 'Заполнение карточек' },
+    ]
+
+  .why-maps(class=allMods)&attributes(attributes)
+    each item, index in items
+      .why-maps__item
+        .why-maps__icon
+          +svg(item.icon)
+        +ui-h4(item.title, 'why-maps, --bold')
+    block

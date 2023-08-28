@@ -1,0 +1,45 @@
+.contacts-list {
+  display: grid;
+  gap: 10px;
+  @include media-tablet-horizontal {
+    gap: 28px;
+  }
+  &__item {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    @include media-tablet-horizontal {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  &__icon {
+    display: flex;
+    width: 57px;
+    height: 52px;
+    flex-shrink: 0;
+    background: $elements-group;
+    border-radius: 10px;
+    @include media-tablet-horizontal {
+      display: none;
+    }
+    .svg {
+      width: 20px;
+      height: 20px;
+      margin: auto;
+    }
+  }
+  &__name {
+    display: none;
+    font-weight: 650;
+    font-size: 18px;
+    line-height: 1.45;
+    @include media-tablet-horizontal {
+      display: block;
+    }
+  }
+  &__ui-p1 {
+    color: $grey;
+  }
+}

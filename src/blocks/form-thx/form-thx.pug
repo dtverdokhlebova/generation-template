@@ -1,0 +1,17 @@
+mixin form-thx(mods)
+  -
+    const baseName = 'form-thx'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .form-thx(class=allMods)&attributes(attributes)
+    +svg('icon_check')
+    +ui-h4('Спасибо, ваша заявка принята!', 'form-thx, --bold')
+    +ui-p1('Ожидайте звонка нашего менеджера', 'form-thx')
+    block

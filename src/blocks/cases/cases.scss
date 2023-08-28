@@ -1,0 +1,7 @@
+.cases {
+  display: grid;
+  gap: 30px;
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

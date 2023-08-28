@@ -1,0 +1,20 @@
+mixin comprehensive-work(mods)
+  -
+    const baseName = 'comprehensive-work'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .comprehensive-work(class=allMods)&attributes(attributes)
+    .comprehensive-work__content
+      +ui-h2('Комплексная работа по&nbsp;вашему проекту', 'comprehensive-work, --bold')
+      +ui-p1('', 'comprehensive-work').text-grey
+        p Наша цель - вывести ваш сайт по максимально продающим запросам в поисковых системах. Тем самым вы будете получать органический трафик и продавать свои услуги и товары.
+        p Мы занимаемся комплексной проработкой вашего присутствия и позиционирования в интернете, мониторим, насколько эффективно работает ваш ресурс, репутацию и&nbsp;многие другие факторы, влияющие на конечный результат.
+    +line-chart('comprehensive-work')
+    block

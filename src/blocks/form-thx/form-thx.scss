@@ -1,0 +1,24 @@
+.form-thx {
+  text-align: center;
+  .svg {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    color: $blue;
+    @include media-tablet {
+      margin-bottom: 18px;
+    }
+    @include media-laptop {
+      width: 147px;
+      height: 147px;
+    }
+  }
+  &__ui-h4 {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__ui-p1 {
+    color: $body-text;
+  }
+}

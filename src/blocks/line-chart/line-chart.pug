@@ -1,0 +1,18 @@
+mixin line-chart(mods)
+  -
+    const baseName = 'line-chart'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .line-chart.test-data(class=allMods)&attributes(attributes)
+    .line-chart__wrapper
+      .line-chart__period Год: 2022
+      .line-chart__area
+        canvas
+    block

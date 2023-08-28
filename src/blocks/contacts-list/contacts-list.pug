@@ -1,0 +1,38 @@
+mixin contacts-list(mods)
+  -
+    const baseName = 'contacts-list'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+    const data = [
+      {
+        icon: 'icon_map',
+        name: 'Россия, г. Ворорнеж',
+        desc: 'г. Воронеж, улица Революции 1905г., 82А'
+      },
+      {
+        icon: 'icon_map',
+        name: 'Россия, г. Сочи',
+        desc: 'г. Сочи, улица Виноградная 12'
+      },
+      {
+        icon: 'icon_email',
+        name: 'Email:',
+        desc: '<a href="mailto:ag@oromo01.ru">ag@oromo01.ru</a>'
+      },
+    ]
+
+  .contacts-list(class=allMods)&attributes(attributes)
+    each item in data
+      .contacts-list__item
+        .contacts-list__icon
+          +svg(item.icon)
+        .contacts-list__name !{item.name}
+        +ui-p1(item.desc, 'contacts-list')
+    block

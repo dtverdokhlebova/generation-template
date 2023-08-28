@@ -1,0 +1,16 @@
+.comprehensive-work {
+  position: relative;
+  display: grid;
+  gap: 40px;
+  align-items: start;
+  @include media-laptop {
+    grid-template-columns: 1fr 554px;
+    gap: 210px;
+  }
+  &__ui-h2 {
+    margin-bottom: 30px;
+    @include media-laptop {
+      margin-bottom: 35px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+mixin ui-switch(data, mods)
+  -
+    const baseName = 'ui-switch'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .ui-switch(class=allMods)&attributes(attributes)
+    input(checked id=data.left.id type='radio' name=data.groupName)&attributes({[`${data.left.attributeName}`]: `${data.left.attributeValue}`})
+    if data.left.text
+      label(for=data.left.id) !{data.left.text}
+    +ui-switch-button()(onclick = data.buttonOnclick)
+    input(id=data.right.id type='radio' name=data.groupName)&attributes({[`${data.right.attributeName}`]: `${data.right.attributeValue}`})
+    if data.right.text
+      label(for=data.right.id) !{data.right.text}
+    block
+
+mixin ui-switch-button(mods)
+  -
+    const baseName = 'ui-switch-button'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  button.ui-switch-button(class=allMods)&attributes(attributes)
+    block

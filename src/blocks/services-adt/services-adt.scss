@@ -1,0 +1,40 @@
+.services-adt {
+  display: grid;
+  gap: 20px;
+  @include media-tablet {
+    gap: 10px;
+  }
+  &__item {
+    padding: 25px;
+    background: $elements-group;
+    border-radius: 15px;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    @include media-laptop {
+      padding: 34px;
+    }
+  }
+  &__count {
+    margin-bottom: 10px;
+    color: $blue;
+    @include media-tablet {
+      margin: 0;
+    }
+  }
+  &__ui-p1 {
+    margin-bottom: 20px;
+    color: $grey;
+    @include media-tablet {
+      margin: 0;
+      color: $white;
+    }
+  }
+  &__ui-h4 {
+    @include media-tablet {
+      margin-left: auto;
+    }
+  }
+}

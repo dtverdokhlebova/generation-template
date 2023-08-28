@@ -1,0 +1,37 @@
+mixin clients(mods)
+  -
+    const baseName = 'clients'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      'logo_vkusvill.svg',
+      'logo_volkswagen.svg',
+      'logo_partnerdevice.svg',
+      'logo_vyborstroi.svg',
+      'logo_vksm.svg',
+      'logo_svyatnyh.svg',
+      'logo_audi.svg',
+      'logo_mazda.svg',
+      'logo_hyundai.svg',
+      'logo_craft.png',
+      'logo_haval.svg',
+      'logo_vmu.png',
+      'logo_jeep.svg',
+      'logo_skoda.svg',
+      'logo_bogdashamilk.svg',
+    ]
+
+  .clients(class=allMods)&attributes(attributes)
+    .clients__wrapper
+      each item, index in items
+        .clients__item(class = (index > 9 ? 'block-none block-none--bf-mobile' : '') data-hidden=(index > 9 ? 'true' : 'false'))
+          img(src=`../../images/${item}`, alt='')
+    block
