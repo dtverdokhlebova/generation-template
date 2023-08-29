@@ -27,16 +27,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-42%, -54%);
-    height: 250%;
+    height: 280%;
     pointer-events: none;
     @include media-tablet {
       width: 150%;
-      max-width: 2070px;
       height: auto;
       transform: translate(-50%, -51%);
     }
     @include media-laptop {
-      width: 109%;
+      width: 2270px;
     }
     img {
       position: relative;

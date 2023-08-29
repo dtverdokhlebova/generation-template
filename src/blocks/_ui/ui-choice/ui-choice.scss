@@ -30,7 +30,7 @@
     input {
       &:checked {
         ~ label {
-          background: $grey-icons;
+          background: #eee;
         }
       }
     }

@@ -442,7 +442,7 @@ a:active {
           justify-content: center;
   padding: 19px 22px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   font-family: var(--font-secondary);
@@ -739,7 +739,7 @@ a:active {
 }
 
 .ui-choice--light input:checked ~ label {
-  background: var(--grey-icons);
+  background: #eee;
 }
 
 .ui-choice--light label {
@@ -1130,6 +1130,9 @@ a:active {
 }
 
 .ui-switch label {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 148.5%;
   cursor: pointer;
 }
 
@@ -4098,13 +4101,14 @@ a:active {
             align-items: center;
     gap: 7px;
     max-width: 142px;
-    border: 1px solid var(--secondary1);
+    border: 1px solid var(--color-on-black-background);
     border-radius: 10px;
     font-size: 12px;
     overflow: hidden;
   }
   .header__wa:active {
     text-decoration: none;
+    border-color: var(--secondary1);
   }
   .header__wa:active::before {
     -webkit-transform: translateX(50%);
@@ -4125,6 +4129,7 @@ a:active {
 @media (min-width: 1359px) and (hover: hover) and (pointer: fine) {
   .header__wa:hover {
     text-decoration: none;
+    border-color: var(--secondary1);
   }
   .header__wa:hover::before {
     -webkit-transform: translateX(50%);
@@ -4243,6 +4248,7 @@ a:active {
   width: 43px;
   height: 43px;
   padding: 0;
+  color: var(--secondary1);
   background: var(--grey-icons);
   border: 0;
   border-radius: 4px;
@@ -4464,14 +4470,13 @@ a:active {
   left: 50%;
   -webkit-transform: translate(-42%, -54%);
           transform: translate(-42%, -54%);
-  height: 250%;
+  height: 280%;
   pointer-events: none;
 }
 
 @media (min-width: 768px) {
   .many-clients__img {
     width: 150%;
-    max-width: 2070px;
     height: auto;
     -webkit-transform: translate(-50%, -51%);
             transform: translate(-50%, -51%);
@@ -4480,7 +4485,7 @@ a:active {
 
 @media (min-width: 1359px) {
   .many-clients__img {
-    width: 109%;
+    width: 2270px;
   }
 }
 
@@ -5857,11 +5862,13 @@ a:active {
   overflow: hidden;
 }
 
-.services__img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+@media (min-width: 768px) {
+  .services__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .services__img img {

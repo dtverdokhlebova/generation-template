@@ -209,12 +209,13 @@
       align-items: center;
       gap: 7px;
       max-width: 142px;
-      border: 1px solid $main-color;
+      border: 1px solid $grey;
       border-radius: 10px;
       font-size: 12px;
       overflow: hidden;
       @include media-hover {
         text-decoration: none;
+        border-color: $main-color;
         &::before {
           transform: translateX(50%);
         }
@@ -296,6 +297,7 @@
     width: 43px;
     height: 43px;
     padding: 0;
+    color: $main-color;
     background: $grey-icons;
     border: 0;
     border-radius: 4px;

@@ -3,6 +3,9 @@
   align-items: center;
   gap: 15px;
   label {
+    font-family: $fontInt;
+    font-size: 16px;
+    line-height: 148.5%;
     cursor: pointer;
   }
   input {
