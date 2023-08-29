@@ -3,6 +3,7 @@ import { refreshScroll, stopScroll } from '../../js'
 export default function header() {
   burgerButton()
   burgerMenu()
+  burgerWAButton()
 }
 
 function burgerButton() {
@@ -59,4 +60,26 @@ function burgerMenu() {
       $(element).hasClass('active') ? submenu.fadeIn(250) : submenu.fadeOut(250)
     }
   }
+}
+
+function burgerWAButton() {
+  $('.header__wa').mouseenter(function (event) {
+    const parentOffset = $(this).offset()
+
+    const relativeX = event.pageX - parentOffset.left
+    const relativeY = event.pageY - parentOffset.top
+    $(this).find('.header__wa-circle').css({ left: relativeX, top: relativeY })
+    $(this).find('.header__wa-circle').removeClass('decrease')
+    $(this).find('.header__wa-circle').addClass('explode')
+  })
+
+  $('.header__wa').mouseleave(function (event) {
+    const parentOffset = $(this).offset()
+
+    const relativeX = event.pageX - parentOffset.left
+    const relativeY = event.pageY - parentOffset.top
+    $(this).find('.header__wa-circle').css({ left: relativeX, top: relativeY })
+    $(this).find('.header__wa-circle').removeClass('explode')
+    $(this).find('.header__wa-circle').addClass('decrease')
+  })
 }

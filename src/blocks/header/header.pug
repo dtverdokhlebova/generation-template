@@ -66,9 +66,11 @@ header.header
         | Оставить заявку
       +socials('header')
     a.header__wa(href='#')
-      img.header__wa-fall(src='../../images/icon_wa-color.svg' alt='')
-      img.header__wa-icon(src='../../images/icon_wa-color.svg' alt='')
-      | Связаться в&nbsp;WhatsApp
+      //- img.header__wa-fall(src='../../images/icon_wa-color.svg' alt='')
+      .header__wa-circle
+      .header__wa-wrapper
+        img.header__wa-icon(src='../../images/icon_wa-color.svg' alt='')
+        | Связаться в&nbsp;WhatsApp
     button.header__burger-button(onclick='window.toggleBurger()')
       span
       span
