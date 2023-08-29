@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger)
   window.addEventListener('load', () => ScrollTrigger.refresh(true))
   smoothScroll()
-  changeBackgroundOnScroll()
 
   uiInput()
   uiSwitch()
@@ -66,35 +65,6 @@ function smoothScroll() {
     $(document).on('click', 'a[href^="#"]', function (event) {
       event.preventDefault()
       lenis.scrollTo($(this).attr('href'), { duration: 2 })
-    })
-  }
-}
-
-function changeBackgroundOnScroll() {
-  for (const darkSection of document.querySelectorAll('.section--bg')) {
-    const isLastSection = () => {
-      if (!darkSection.nextElementSibling) return true
-      return !(darkSection.nextElementSibling.classList.contains('section'))
-    }
-    ScrollTrigger.create({
-      trigger: darkSection,
-      start: 'top 50%',
-      end: isLastSection() ? 'bottom top' : 'bottom 40%',
-      onToggle: self => {
-        if (self.isActive) {
-          gsap.to('.wrapper', {
-            backgroundColor: '#101010',
-            overwrite: 'auto',
-            duration: 0.7
-          })
-        } else {
-          gsap.to('.wrapper', {
-            backgroundColor: '#fafafa',
-            overwrite: 'auto',
-            duration: 0.7
-          })
-        }
-      }
     })
   }
 }
@@ -149,7 +119,7 @@ export const hoverEvents = (item, popover, scaleItem) => {
     const moveX = event.clientX - bounding.left - bounding.width / 2
     const moveY = event.clientY - bounding.top - bounding.height / 2
     gsap.to(popover, {
-      scale: 1.1,
+      scale: 1,
       opacity: 1,
       x: posX,
       y: posY,

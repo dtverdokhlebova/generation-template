@@ -11,16 +11,18 @@ mixin swipe(data, mods)
     }
 
   .swipe(class=allMods)&attributes(attributes)
-    .swiper
-      .swiper-wrapper
-        .swipe__slide.swiper-slide
-          .swipe__label
-            +ui-h4(data.label, '--bold')
-          .swipe__main
-            each row in data.rows
-              .swipe__row
-                each img in row.imgs
-                  .swipe__img(class=img.mods)
-                    img(src=`../../images/${img.img}`, alt='')
+    .swipe__wrapper
+      .swipe__slider
+        .swiper
+          .swiper-wrapper
+            .swipe__slide.swiper-slide
+              .swipe__main
+                each row in data.rows
+                  .swipe__row
+                    each img in row.imgs
+                      .swipe__img(class=img.mods)
+                        img(src=`../../images/${img.img}`, alt='')
+      .swipe__label
+        +ui-h4(data.label, '--bold')
     +ui-swiper-scrollbar('--light')
     block

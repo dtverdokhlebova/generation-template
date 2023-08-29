@@ -11,6 +11,5 @@ mixin ui-input(id, mods, type)
     }
 
   .ui-input(class=allMods)
-    .ui-input__controls
-      input(id=id name=name type=(typeof(type) !== 'undefined' && type ? type : 'text'))&attributes(attributes)
+    input(id=id name=name type=(typeof(type) !== 'undefined' && type ? type : 'text'))&attributes(attributes)
     block

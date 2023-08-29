@@ -42,7 +42,7 @@ function servicesSlider() {
           translate: [0, 0, -400]
         },
         next: {
-          translate: ['100%', 0, 0]
+          translate: ['101%', 0, 0]
         }
       },
       autoplay: {

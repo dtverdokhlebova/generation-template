@@ -41,7 +41,7 @@
               </li>
               <li class="header__item"><a class="header__link" href="#">Контакты</a>
               </li>
-            </ul><a class="ui-button header__ui-button ui-button--blue" href="#section-form" onclick="window.toggleBurger()">👉 Оставить заявку</a>
+            </ul><a class="ui-button header__ui-button ui-button--request ui-button--blue" href="#section-form" onclick="window.toggleBurger()"><span class="ui-button__img"><img src="images/forefinger.gif" alt=""></span>Оставить заявку</a>
             <div class="socials header__socials"><a class="socials__item" href="#">
                 <svg class="svg svg--icon_dzen">
                   <use xlink:href="images/sprite.svg#icon_dzen"></use>
@@ -82,7 +82,7 @@
         <section class="section section--bg section--mt0">
           <section class="section">
             <div class="inner">
-              <div class="section-head section-head--max-w-xxxxxs section-head--t-flex section-head--bb">
+              <div class="section-head section-head--m-mb-l section-head--max-w-xxxxs section-head--t-flex section-head--bb">
                 <h2 class="ui-h2 section-head__ui-h2">Описание <br> проекта
                 </h2>
                 <div class="tags">
@@ -91,11 +91,11 @@
                     </div>
                   </div>
                   <div class="tags__item">
-                    <div class="ui-p1">Интернет магазин
+                    <div class="ui-p1">UX/UI
                     </div>
                   </div>
                   <div class="tags__item">
-                    <div class="ui-p1">UX/UI
+                    <div class="ui-p1">Интернет магазин
                     </div>
                   </div>
                   <div class="tags__item">
@@ -196,22 +196,26 @@
           <section class="section">
             <div class="inner">
               <div class="swipe">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swipe__slide swiper-slide">
-                      <div class="swipe__label">
-                        <h4 class="ui-h4 ui-h4--bold">Компания Партнер
-                        </h4>
-                      </div>
-                      <div class="swipe__main">
-                        <div class="swipe__row">
-                          <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
-                          <div class="swipe__img"><img src="images/swipe_img_case_2.png" alt=""/></div>
-                          <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
-                          <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
+                <div class="swipe__wrapper">
+                  <div class="swipe__slider">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swipe__slide swiper-slide">
+                          <div class="swipe__main">
+                            <div class="swipe__row">
+                              <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
+                              <div class="swipe__img"><img src="images/swipe_img_case_2.png" alt=""/></div>
+                              <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
+                              <div class="swipe__img"><img src="images/swipe_img_case_1.png" alt=""/></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="swipe__label">
+                    <h4 class="ui-h4 ui-h4--bold">Компания Партнер
+                    </h4>
                   </div>
                 </div>
                 <div class="ui-swiper-scrollbar ui-swiper-scrollbar--light">
@@ -243,7 +247,7 @@
                   <div class="cases-item__content">
                     <h3 class="ui-h3 cases-item__ui-h3 ui-h3--bold">Компания “Volvo”
                     </h3>
-                    <div class="ui-p1 ui-p1--medium text-body">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
+                    <div class="ui-p1 ui-p1--medium text-grey">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
                     </div>
                   </div></a><a class="cases-item cases-item--on-dark-bg" href="#">
                   <div class="cases-item__head">
@@ -255,7 +259,7 @@
                   <div class="cases-item__content">
                     <h3 class="ui-h3 cases-item__ui-h3 ui-h3--bold">Компания “Volvo”
                     </h3>
-                    <div class="ui-p1 ui-p1--medium text-body">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
+                    <div class="ui-p1 ui-p1--medium text-grey">По результатам анализа сайта клиента, конкурентов и целевой аудитории, а также выделенного
                     </div>
                   </div></a>
               </div>
@@ -590,15 +594,11 @@
                     <div class="form__section">
                       <div class="form__fields">
                         <div class="ui-input">
-                          <div class="ui-input__controls">
-                            <input id="tel" type="text" placeholder="Телефон"/>
-                          </div>
+                          <input id="tel" type="text" placeholder="Телефон"/>
                           <div class="ui-input__error block-fade-in active">Поле заполнено некорректно</div>
                         </div>
                         <div class="ui-input">
-                          <div class="ui-input__controls">
-                            <input id="name" type="text" placeholder="Имя"/>
-                          </div>
+                          <input id="name" type="text" placeholder="Имя"/>
                         </div>
                       </div>
                     </div>
@@ -629,7 +629,7 @@
                       </div>
                     </div>
                     <div class="form__section">
-                      <button class="ui-button ui-button--blue ui-button--w100" type="submit">👉 Отправить
+                      <button class="ui-button ui-button--blue ui-button--w100" type="submit"><span class="ui-button__img"><img src="images/forefinger.gif" alt=""/></span>Отправить
                       </button>
                       <div class="form__fn">Нажимая кнопку отправить, вы соглашаетесь с&nbsp;<a href="#" target="_blank">политикой конфиденциальности</a></div>
                     </div>

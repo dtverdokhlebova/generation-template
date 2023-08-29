@@ -25,13 +25,11 @@ block variables
 
   -
     const tariffsData ={
-      idSwitch: 'web',
       items: [
         { title: 'Лендинг',
           priceBefore: 'от ',
           price: '120 500 ₽',
           button: 'Оставить заявку',
-          more: true,
           props: [
             { name: 'До 5 блоков' },
             { name: 'Вспывающие формы и&nbsp;лид&nbsp;магниты' },
@@ -44,7 +42,6 @@ block variables
           priceBefore: 'от ',
           price: '750 000 ₽',
           button: 'Оставить заявку',
-          more: true,
           props: [
             { name: 'Все разделы для eCommerce ' },
             { name: 'Интеграция с&nbsp;1С ' },
@@ -56,7 +53,6 @@ block variables
         { title: 'Квиз-лендинг',
           price: '22 700 ₽',
           button: 'Оставить заявку',
-          more: true,
           props: [
             { name: 'Основной экран' },
             { name: 'Квиз' },
@@ -69,7 +65,6 @@ block variables
           priceBefore: 'от ',
           price: '250 000 ₽',
           button: 'Оставить заявку',
-          more: true,
           props: [
             { name: 'До 5 стандартных блоков' },
             { name: 'Каталог для&nbsp;SEO' },
@@ -93,7 +88,7 @@ block content
       +section('--ov-hidden')
         .inner
           +section-head('--with-switch')
-            +section-head('--max-w-xxxxxs')
+            +section-head('--max-w-xxxxs')
               +ui-h2('Наши тарифы', 'section-head, --bold')
               +ui-p1('Выберите для&nbsp;себя удобный тариф исходя из&nbsp;ваших целей', 'section-head').text-grey
             +ui-switch(switchTariffsData)

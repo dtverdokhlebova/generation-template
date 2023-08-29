@@ -85,8 +85,7 @@
   &--bg {
     padding: 90px 0;
     color: $white;
-
-    // background: $bg;
+    background: $bg;
     @include media-tablet {
       padding: 120px 0;
     }
@@ -136,6 +135,13 @@
       }
     }
   }
+  &--m-mb-l {
+    &:not(:last-child) {
+      @include media-tablet-d-first {
+        margin-bottom: 40px;
+      }
+    }
+  }
   &--l-mb-s {
     &:not(:last-child) {
       @include media-laptop {
@@ -179,7 +185,7 @@
       }
     }
   }
-  &--max-w-xxxxxs {
+  &--max-w-xxxxs {
     .section-head {
       &__ui-h2,
       &__ui-p1 {

@@ -11,21 +11,29 @@
     position: relative;
     color: $grey;
     background: $bg;
-    border: 1px solid $main-color;
+    border: 1px solid #232323;
     border-width: 1px 0 0;
     transition: $transitionDuration;
+    @include media-tablet {
+      color: $bg-white;
+    }
     &:last-child {
       border-block-width: 1px;
     }
     &.active {
       color: $white;
       background: $elements-group;
+      @include media-tablet {
+        color: $bg-white;
+      }
       .services {
         &__progress {
           opacity: 1;
         }
-        &__count {
-          color: $blue;
+        &__title {
+          &--count {
+            color: $blue;
+          }
         }
       }
     }
@@ -52,8 +60,14 @@
     width: 25px;
     height: 25px;
   }
-  &__count {
+  &__title {
+    font-weight: 650;
+    font-size: 19px;
+    line-height: 116%;
     transition: $transitionDuration;
+    @include media-laptop {
+      font-size: 25px;
+    }
   }
   &__ui-p1 {
     align-self: center;
@@ -79,15 +93,28 @@
     display: none;
     @include media-tablet {
       display: block;
-      border-radius: 10px;
-      overflow: hidden;
+      height: 100%;
+    }
+    .swiper {
+      @include media-tablet {
+        height: 100%;
+      }
+      &-slide {
+        border-radius: 10px;
+        overflow: hidden;
+      }
     }
   }
   &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: left center;
     }
   }
   &--light {

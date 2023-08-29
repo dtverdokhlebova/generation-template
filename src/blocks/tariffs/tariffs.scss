@@ -28,7 +28,7 @@
   }
   &__props {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
   }
   &__prop {
@@ -37,7 +37,11 @@
     justify-content: space-between;
     gap: 50px;
     padding: 10px 0;
-    border-top: 1px solid #282828;
+    border: 1px solid #282828;
+    border-width: 1px 0;
+    @include media-tablet {
+      padding: 13px 0;
+    }
     &:first-child {
       padding-top: 0;
       border-top: 0;

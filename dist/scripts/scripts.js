@@ -1,17 +1,10 @@
 const style = "";
 function uiInput() {
-  const uiInputs = $(".ui-input input");
-  uiInputs.on("focus", function() {
-    $(this).parents(".ui-input").addClass("focus");
-  });
-  uiInputs.on("blur", function() {
-    $(this).parents(".ui-input").removeClass("focus");
-  });
-  uiInputs.on("input", function() {
+  $(".ui-input input").on("input", function() {
     if ($(this).val() === "") {
-      $(this).parents(".ui-input").removeClass("filled");
+      $(this).removeClass("filled");
     } else {
-      $(this).parents(".ui-input").addClass("filled");
+      $(this).addClass("filled");
     }
   });
 }
@@ -54,12 +47,11 @@ function uiSwitch() {
 function loader() {
   stopScroll();
   window.addEventListener("load", function() {
-    $(".loader").addClass("loader--close");
-    const animationDuration = Number.parseFloat($(".loader").css("animation-duration"));
     setTimeout(() => {
+      $(".loader").addClass("loader--close");
       window.dispatchEvent(new Event("loader:close"));
-    }, animationDuration * 1e3);
-    refreshScroll();
+      refreshScroll();
+    }, 1600);
   });
 }
 function accordion() {
@@ -78,7 +70,7 @@ function approach() {
         translate: [0, 0, -400]
       },
       next: {
-        translate: ["100%", 0, 0]
+        translate: ["101%", 0, 0]
       }
     },
     autoplay: {
@@ -443,7 +435,7 @@ function createCheckbox(id, text, isChecked) {
       <input id="${id}" type="checkbox" ${isChecked ? "checked" : ""}>
       <label for="${id}">${text}
         <svg class="svg svg--icon_checkbox">
-          <use xlink:href="/images/sprite.svg#icon_checkbox"></use>
+          <use xlink:href="images/sprite.svg#icon_checkbox"></use>
         </svg>
       </label>
     </div>
@@ -1883,7 +1875,7 @@ function servicesSlider() {
           translate: [0, 0, -400]
         },
         next: {
-          translate: ["100%", 0, 0]
+          translate: ["101%", 0, 0]
         }
       },
       autoplay: {
@@ -1992,7 +1984,6 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
   window.addEventListener("load", () => ScrollTrigger.refresh(true));
   smoothScroll();
-  changeBackgroundOnScroll();
   uiInput();
   uiSwitch();
   loader();
@@ -2031,35 +2022,6 @@ function smoothScroll() {
     $(document).on("click", 'a[href^="#"]', function(event) {
       event.preventDefault();
       lenis.scrollTo($(this).attr("href"), { duration: 2 });
-    });
-  }
-}
-function changeBackgroundOnScroll() {
-  for (const darkSection of document.querySelectorAll(".section--bg")) {
-    const isLastSection = () => {
-      if (!darkSection.nextElementSibling)
-        return true;
-      return !darkSection.nextElementSibling.classList.contains("section");
-    };
-    ScrollTrigger.create({
-      trigger: darkSection,
-      start: "top 50%",
-      end: isLastSection() ? "bottom top" : "bottom 40%",
-      onToggle: (self) => {
-        if (self.isActive) {
-          gsap.to(".wrapper", {
-            backgroundColor: "#101010",
-            overwrite: "auto",
-            duration: 0.7
-          });
-        } else {
-          gsap.to(".wrapper", {
-            backgroundColor: "#fafafa",
-            overwrite: "auto",
-            duration: 0.7
-          });
-        }
-      }
     });
   }
 }
@@ -2107,7 +2069,7 @@ const hoverEvents = (item, popover, scaleItem) => {
     const moveX = event.clientX - bounding.left - bounding.width / 2;
     const moveY = event.clientY - bounding.top - bounding.height / 2;
     gsap.to(popover, {
-      scale: 1.1,
+      scale: 1,
       opacity: 1,
       x: posX,
       y: posY,

@@ -6,11 +6,8 @@
   min-height: 300px;
   padding: 45px 0;
   text-align: center;
-  @include media-tablet {
-    min-height: 460px;
-  }
   @include media-laptop {
-    min-height: 690px;
+    min-height: 485px;
   }
   &__title {
     position: relative;
@@ -30,15 +27,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-42%, -54%);
-    height: 200%;
+    height: 250%;
     pointer-events: none;
     @include media-tablet {
-      transform: translate(-50%, -50%);
+      width: 150%;
+      max-width: 2070px;
+      height: auto;
+      transform: translate(-50%, -51%);
+    }
+    @include media-laptop {
+      width: 109%;
     }
     img {
       position: relative;
       max-width: unset;
       height: 100%;
+      @include media-tablet {
+        max-width: 100%;
+        height: auto;
+      }
     }
   }
 }

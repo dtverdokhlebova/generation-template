@@ -47,5 +47,9 @@
       flex-shrink: 0;
       width: 255px;
     }
+    &-count {
+      margin-right: 5px;
+      color: $grey;
+    }
   }
 }

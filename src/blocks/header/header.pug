@@ -61,7 +61,9 @@ header.header
                     a.header__sublink(href=subitem.link) !{subitem.name}
             else
               a.header__link(href=item.link) !{item.name}
-      +ui-button('👉 Оставить заявку', 'header, --blue')(href='#section-form' onclick='window.toggleBurger()')
+      +ui-button('', 'header, --request, --blue')(href='#section-form' onclick='window.toggleBurger()')
+        span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+        | Оставить заявку
       +socials('header')
     a.header__wa(href='#')
       img.header__wa-fall(src='../../images/icon_wa-color.svg' alt='')

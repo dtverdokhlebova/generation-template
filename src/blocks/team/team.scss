@@ -12,13 +12,16 @@
         opacity: 1;
       }
     }
+    &:active {
+      cursor: grabbing;
+    }
   }
   &__experience {
     position: absolute;
     top: 15px;
     right: 15px;
     padding: 6px 10px;
-    font: 500 14px/1 $fontInt;
+    font: 14px/1 $fontInt;
     color: $white;
     background: rgb(0 0 0 / 0.4);
     border-radius: 5px;

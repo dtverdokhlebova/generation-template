@@ -14,7 +14,7 @@ mixin services-adt(items, mods)
     each item, index in items
       .services-adt__item(class=(item.hidden ? 'block-none block-none--all' : '') data-hidden=(item.hidden ? 'true' : 'false'))
         +ui-h4(`0${index+1}`, '--bold', 'div').services-adt__count
-        +ui-p1(item.title, 'services-adt, --t-h4')
+        +ui-p1(item.title, 'services-adt, --t-h4, --t-h-bold')
         +ui-h4(item.price, 'services-adt, --bold', 'div').text-nowrap
 
     block

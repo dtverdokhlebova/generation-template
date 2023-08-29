@@ -29,15 +29,18 @@
 }
 
 .page-404 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   padding: 90px 0;
   @include media-tablet {
+    gap: 45px;
     width: fit-content;
     margin: 0 auto;
     padding: 105px 0;
   }
   @include media-laptop {
-    display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     gap: 60px;
   }
@@ -50,15 +53,16 @@
     margin-bottom: 25px;
   }
   &__ui-p1 {
-    margin-bottom: 25px;
+    @include media-laptop {
+      margin-bottom: 25px;
+    }
   }
   &__decor {
-    margin-bottom: 45px;
     @include media-tablet {
       display: flex;
       gap: 35px;
       width: fit-content;
-      margin: 0 auto 60px;
+      margin: 0 auto;
     }
     @include media-laptop {
       margin: 0;

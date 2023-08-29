@@ -17,7 +17,9 @@ mixin banner(mods)
           +ui-h1('Digital-агентство полного&nbsp;цикла', 'banner, --xl --bold')
             span.banner__dot .
           .banner__desc Настоящие профи с креативным подходом и богатым багажом знаний
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           .banner__video
             video.banner__video-player(autoplay loop muted playsinline src='https://uploads-ssl.webflow.com/634d560fb778817748fac023/636dff114a3e3c3bab746000_TDK-transcode.mp4')
@@ -26,8 +28,10 @@ mixin banner(mods)
         .banner__content
           +ui-h1('SMM - продвижение в&nbsp;социальных сетях', 'banner, --bold')
             span.banner__dot .
-          .banner__desc Настройка таргетированной рекламы в подарок!
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          .banner__desc.banner__desc--l-xs Настройка таргетированной рекламы в подарок!
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           img(src='../../images/banner/banner_smm-1.png' alt='')
           img(src='../../images/banner/banner_smm-2.png' alt='' data-parallax='-15')
@@ -44,7 +48,9 @@ mixin banner(mods)
           +ui-h1('SEO, которое работает на&nbsp;результат', 'banner, --bold')
             span.banner__dot .
           .banner__desc Аудит и&nbsp;план работ в&nbsp;подарок!
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           img.banner__drop-shadow(src='../../images/banner/banner_seo-2.png' alt='' data-parallax='15')
           img.banner__drop-shadow(src='../../images/banner/banner_seo-3.png' alt='' data-parallax='-17')
@@ -57,7 +63,9 @@ mixin banner(mods)
           +ui-h1('Настройка и&nbsp;сопровождение VK&nbsp;рекламы', 'banner, --bold')
             span.banner__dot .
           .banner__desc Приведем клиентов из ВК рекламы. <br> Лиды от 150 рублей
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           .banner__cards
             -for(let i=1; i<=4; i++)
@@ -71,7 +79,9 @@ mixin banner(mods)
           +ui-h1('Настройка и&nbsp;сопровождение Яндекс Директ', 'banner, --bold')
             span.banner__dot .
           .banner__desc.banner__desc--l-xs Эффективный инструмент продвижения от&nbsp;малого до крупного бизнеса. Клиенты с&nbsp;первых дней запуска
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           img(src='../../images/banner/banner_yandex-direct-6.png' alt='')
           img(src='../../images/banner/banner_yandex-direct-1.png' alt='' data-parallax='-10')
@@ -85,7 +95,9 @@ mixin banner(mods)
           +ui-h1('Web-разработка', 'banner, --bold')
             span.banner__dot .
           .banner__desc.banner__desc--l-xs Подзаголовок, Подзаголовок, Подзаголовок Подзаголовок
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           .banner__mockups.banner__mockups--anim
             .banner__mockup
@@ -127,6 +139,8 @@ mixin banner(mods)
           +ui-h1('Продвижение на&nbsp;картах и в <span class="text-nowrap">ГЕО-сервисах</span>', 'banner, --bold')
             span.banner__dot .
           .banner__desc.banner__desc--l-xs Получайте максимум клиентов из&nbsp;Яндекс.Карт, Google map и 2gis
-          +ui-button('👉 Оставить заявку', 'banner, --blue')(href='#section-form')
+          +ui-button('', 'banner, --request, --blue')(href='#section-form')
+            span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+            | Оставить заявку
         .banner__pic
           img(src='../../images/banner/banner_geoservices.png' alt='')

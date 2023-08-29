@@ -11,6 +11,14 @@ mixin page-404(mods)
     }
 
   .page-404(class=allMods)&attributes(attributes)
+    .page-404__text
+      +ui-h1('Страница ', 'page-404, --bold')
+        span.text-nowrap не найдена
+          span.text-blue  .
+      +ui-p1('Возможно, вы ошиблись в&nbsp;адресе или&nbsp;мы&nbsp;удалили эту страницу', 'page-404, --medium, --l-size-l').text-body
+      .block-none.block-none--bf-laptop
+        +ui-button('На главную страницу', 'page-404, --px-xs, --blue')(href='main.html')
+
     .page-404__decor
       .page-404__num
         img(src='../../images/page_404_num.svg', alt='')
@@ -72,11 +80,7 @@ mixin page-404(mods)
       .page-404__num
         img(src='../../images/page_404_num.svg', alt='')
 
-    .page-404__text
-      +ui-h1('Страница ', 'page-404, --bold')
-        span.text-nowrap не найдена
-          span.text-blue  .
-      +ui-p1('Возможно, вы ошиблись в&nbsp;адресе или&nbsp;мы&nbsp;удалили эту страницу', 'page-404, --medium, --l-size-l').text-body
+    .text-center.block-none.block-none--laptop
       +ui-button('На главную страницу', 'page-404, --px-xs, --blue')(href='main.html')
 
     block

@@ -26,6 +26,15 @@
       line-height: 139.5%;
     }
   }
+  &--t-size-xl {
+    @include media-tablet {
+      font-size: 18px;
+    }
+    @include media-laptop {
+      font-size: 22px;
+      line-height: 115%;
+    }
+  }
 }
 [class*='ui-p'] {
   // &[class*='--light'] {

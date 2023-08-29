@@ -21,6 +21,7 @@
     @include media-laptop {
       max-width: 340px;
       font-size: 18px;
+      line-height: 139.5%;
     }
     &:not(:first-child) {
       margin-top: 15px;
@@ -107,7 +108,10 @@
     }
   }
   &__drop-shadow {
-    filter: drop-shadow(4px 4px 14px rgb(184 184 184 / 0.25));
+    filter: drop-shadow(4px 4px 12px rgb(184 184 184 / 0.1));
+    @include media-laptop {
+      filter: drop-shadow(4px 4px 12px rgb(184 184 184 / 0.2));
+    }
   }
   &__cards {
     display: grid;
@@ -126,7 +130,7 @@
     width: 58.46vw;
     height: 61.54vw;
     margin: 0 auto;
-    filter: drop-shadow(0 2.73px 5.47px rgb(0 0 0 / 0.14));
+    filter: drop-shadow(0 3.85px 3.7px rgb(0 0 0 / 0.1));
     transform-origin: center;
     @include media-laptop {
       width: 321px;
@@ -212,13 +216,16 @@
     }
   }
   &--main {
+    @include media-laptop {
+      padding: 130px 0 150px;
+    }
     .banner {
       &__content {
         @include media-laptop {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          padding-bottom: 30px;
+          padding-bottom: 80px;
         }
       }
       &__ui-h1 {
@@ -252,13 +259,13 @@
   }
   &--smm {
     @include media-laptop {
-      padding: 173px 0 150px;
+      padding: 130px 0 150px;
       gap: 170px;
     }
     .banner {
       &__content {
         @include media-laptop {
-          padding-bottom: 97px;
+          padding-bottom: 147px;
         }
       }
       &__desc {
@@ -289,13 +296,13 @@
     padding: 110px 0 87px;
     gap: 80px;
     @include media-laptop {
-      padding: 180px 0 150px;
+      padding: 130px 0 150px;
       gap: 107px;
     }
     .banner {
       &__content {
         @include media-laptop {
-          padding-bottom: 30px;
+          padding-bottom: 25px;
         }
       }
       &__pic {
@@ -326,7 +333,7 @@
     .banner {
       &__content {
         @include media-laptop {
-          padding-bottom: 114px;
+          padding-bottom: 82px;
         }
       }
     }
@@ -334,7 +341,7 @@
   &--yandex-direct {
     gap: 80px;
     @include media-laptop {
-      padding: 210px 0 155px;
+      padding: 210px 0 145px;
       gap: 110px;
     }
     .banner {
@@ -351,8 +358,8 @@
           margin: 0 auto -100px;
         }
         @include media-laptop {
-          margin-top: -65px;
-          margin-bottom: -300px;
+          margin-top: -75px;
+          margin-bottom: -280px;
           margin-right: max(-30px, -1.56vw);
         }
         &::before {
@@ -361,7 +368,7 @@
           width: 100%;
           padding-bottom: 106%;
           @include media-laptop {
-            padding-bottom: 107%;
+            padding-bottom: 108%;
           }
         }
       }
@@ -370,9 +377,14 @@
   &--web {
     gap: 80px;
     @include media-laptop {
-      padding: 165px 0;
+      padding: 130px 0 115px;
     }
     .banner {
+      &__content {
+        @include media-laptop {
+          padding-bottom: 25px;
+        }
+      }
       &__desc {
         @include media-laptop {
           max-width: 415px;

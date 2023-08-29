@@ -14,5 +14,5 @@ mixin count-list(items, mods)
     each item, index in items
       .count-list__item
         +ui-h4(`0${index+1}`, '--bold', 'div').count-list__count
-        +ui-p1(item.title, 'count-list, --t-h4, --medium, --t-h-bold')
+        +ui-p1(item.title, 'count-list, --t-size-xl, --medium')
     block

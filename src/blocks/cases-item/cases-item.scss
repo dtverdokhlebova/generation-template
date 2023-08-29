@@ -7,7 +7,7 @@
   }
   &:not(:first-child) {
     padding-top: 30px;
-    border-top: 1px solid $border;
+    border-top: 1px solid #282828;
     @include media-tablet {
       padding-top: 0;
       border-top: 0;
@@ -56,14 +56,11 @@
     margin-bottom: 10px;
   }
   &__descr {
-    font-family: $fontInt;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 148.5%;
-    @include media-tablet {
-      font-family: $font;
-      font-size: 18px;
-      font-weight: 650;
+    font-weight: 650;
+    font-size: 18px;
+    line-height: 145%;
+    @include media-laptop {
+      font-size: 20px;
       line-height: 138.5%;
     }
   }

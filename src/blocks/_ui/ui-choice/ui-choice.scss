@@ -39,7 +39,7 @@
       border: 1px solid #DEDEDE;
       color: $body-text;
       @include media-hover {
-        background: $grey-icons;
+        background: #eee;
       }
     }
   }

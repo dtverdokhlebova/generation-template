@@ -22,29 +22,14 @@ mixin tariffs(data, dataSwitch, mods)
               if item.props
                 .tariffs__props
                   each prop, inpdexProp in item.props
-                    +tariffs__prop(prop.name, `0${inpdexProp+1}`)
-                  if item.more
-                    -for(let i=0; i<2; i++)
-                      +tariffs__prop('item hidden', `0${item.props.length+1+i}`)(style='display: none;' data-tariffs-prop-hidden='')
-                      //- +tariffs__prop('item hidden', `0${item.props.length+1+i}`).block-fade-in(style='display: none;' data-switch-element=`tariffs_${data.idSwitch}_2_${index}`)
-              if item.more
+                    if inpdexProp > 2
+                      +tariffs__prop(prop.name, `0${inpdexProp+1}`)(style='display: none;' data-tariffs-prop-hidden='')
+                    else
+                      +tariffs__prop(prop.name, `0${inpdexProp+1}`)
+              if (item.props && item.props.length > 3)
                 .tariffs__more
                   +ui-p1('Показать еще', '--medium')
                   +ui-switch-button()(onclick = 'tariffsPropsToggle(this)')
-                  //- +ui-switch({
-                  //-   buttonOnclick: 'uiSwitchButton(this)',
-                  //-   groupName: `tariffs_group_${data.idSwitch}_${index}`,
-                  //-   left: {
-                  //-     id: `tariffs_${data.idSwitch}_1_${index}`,
-                  //-     attributeName: 'data-switch-target',
-                  //-     attributeValue: `tariffs_${data.idSwitch}_1_${index}`,
-                  //-   },
-                  //-   right: {
-                  //-     id: `tariffs_${data.idSwitch}_2_${index}`,
-                  //-     attributeName: 'data-switch-target',
-                  //-     attributeValue: `tariffs_${data.idSwitch}_2_${index}`,
-                  //-   },
-                  //- })
             .tariffs__bottom
               .tariffs__price
                 +ui-p1('Цена:', '--medium').tariffs__price-label
@@ -63,8 +48,8 @@ mixin tariffs(data, dataSwitch, mods)
 
 mixin tariffs__prop(name, index)
   .tariffs__prop&attributes(attributes)
-    +ui-p1(name, '--medium').tariffs__name
-    +ui-p1(index, '--medium').tariffs__count
+    +ui-p1(name).tariffs__name
+    +ui-p1(index).tariffs__count
 
 mixin tariffs__price-val(priceBefore, price)
   .tariffs__price-val.block-fade-in

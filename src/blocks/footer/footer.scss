@@ -81,7 +81,7 @@
     transform: translateY(15px) scale3d(0.8, 0.8, 1);
     transform-origin: bottom;
     transform-style: preserve-3d;
-    box-shadow: 4px 4px 26px 0 rgb(217 217 217 / 0.05);
+    box-shadow: 4px 4px 26px 0 rgb(217 217 217 / 0.01);
     visibility: hidden;
     transition: 0.4s;
     &::before {

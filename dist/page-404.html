@@ -41,7 +41,7 @@
               </li>
               <li class="header__item"><a class="header__link" href="#">Контакты</a>
               </li>
-            </ul><a class="ui-button header__ui-button ui-button--blue" href="#section-form" onclick="window.toggleBurger()">👉 Оставить заявку</a>
+            </ul><a class="ui-button header__ui-button ui-button--request ui-button--blue" href="#section-form" onclick="window.toggleBurger()"><span class="ui-button__img"><img src="images/forefinger.gif" alt=""></span>Оставить заявку</a>
             <div class="socials header__socials"><a class="socials__item" href="#">
                 <svg class="svg svg--icon_dzen">
                   <use xlink:href="images/sprite.svg#icon_dzen"></use>
@@ -60,10 +60,18 @@
           <button class="header__burger-button" onclick="window.toggleBurger()"><span></span><span></span><span></span></button>
         </div>
       </header>
-      <main class="main">
+      <main class="main main--404">
         <section class="section">
           <div class="inner">
             <div class="page-404">
+              <div class="page-404__text">
+                <h1 class="ui-h1 page-404__ui-h1 ui-h1--bold">Страница <span class="text-nowrap">не найдена<span class="text-blue"> .</span></span>
+                </h1>
+                <div class="ui-p1 page-404__ui-p1 ui-p1--medium ui-p1--l-size-l text-body">Возможно, вы ошиблись в&nbsp;адресе или&nbsp;мы&nbsp;удалили эту страницу
+                </div>
+                <div class="block-none block-none--bf-laptop"><a class="ui-button page-404__ui-button ui-button--px-xs ui-button--blue" href="main.html">На главную страницу</a>
+                </div>
+              </div>
               <div class="page-404__decor">
                 <div class="page-404__num"><img src="images/page_404_num.svg" alt=""/></div>
                 <div class="page-404__game"><section id="view">
@@ -117,11 +125,7 @@
                 </div>
                 <div class="page-404__num"><img src="images/page_404_num.svg" alt=""/></div>
               </div>
-              <div class="page-404__text">
-                <h1 class="ui-h1 page-404__ui-h1 ui-h1--bold">Страница <span class="text-nowrap">не найдена<span class="text-blue"> .</span></span>
-                </h1>
-                <div class="ui-p1 page-404__ui-p1 ui-p1--medium ui-p1--l-size-l text-body">Возможно, вы ошиблись в&nbsp;адресе или&nbsp;мы&nbsp;удалили эту страницу
-                </div><a class="ui-button page-404__ui-button ui-button--px-xs ui-button--blue" href="main.html">На главную страницу</a>
+              <div class="text-center block-none block-none--laptop"><a class="ui-button page-404__ui-button ui-button--px-xs ui-button--blue" href="main.html">На главную страницу</a>
               </div>
             </div>
           </div>

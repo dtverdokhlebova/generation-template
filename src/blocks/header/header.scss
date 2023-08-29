@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   padding: 21px 0;
   font-family: $fontInt;
@@ -151,7 +151,7 @@
   }
   &__subitem {
     &:not(:last-child) {
-      margin-bottom: 5px;
+      margin-bottom: 7px;
       @include media-laptop {
         margin-bottom: 12px;
       }
@@ -204,11 +204,11 @@
     font-size: 0;
     line-height: 1.36;
     @include media-laptop {
-      padding: 14px 20px;
+      padding: 8px 15px;
       display: flex;
       align-items: center;
       gap: 7px;
-      max-width: 150px;
+      max-width: 142px;
       border: 1px solid $main-color;
       border-radius: 10px;
       font-size: 12px;
@@ -251,8 +251,8 @@
     }
     &-icon {
       display: block;
-      width: 39px;
-      height: 39px;
+      width: 33px;
+      height: 33px;
       @include media-laptop {
         width: 25px;
         height: 25px;
@@ -270,7 +270,6 @@
         transform: translate(-50%, -250%);
         z-index: 3;
         display: block;
-        color: #222;
         transition: 0.3s linear;
       }
     }
@@ -308,10 +307,6 @@
       width: 20px;
       height: 2px;
       background: currentcolor;
-      transition: $transitionDuration;
-      @supports (rotate: 45deg) {
-        transition: translate 0.3s 0.2s, rotate 0.2s, opacity 0.2s;
-      }
     }
   }
   &--burger {

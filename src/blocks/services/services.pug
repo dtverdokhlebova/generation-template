@@ -20,8 +20,8 @@ mixin services(items, mods)
               .services__icon
                 img(src=`../../images/${item.icon}`, alt='')
             else
-              +ui-p1(`0${index+1}`, '--l-h4').services__count
-            +ui-p1(item.title, 'services, --l-h4')
+              .services__title.services__title--count=`0${index+1}`
+            .services__title !{item.title}
           .services__body
             .services__img
               img(src=`../../images/${item.img}`, alt='')

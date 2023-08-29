@@ -29,7 +29,9 @@ mixin form(mods = '')
         +ui-choice('Контекстная реклама', 'context-ads', choiceMod)
         +ui-choice('Таргетированная реклама', 'target-ads', choiceMod)
     .form__section
-      +ui-button('👉 Отправить', '--blue, --w100')(type='submit')
+      +ui-button('', '--blue, --w100')(type='submit')
+        span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+        | Отправить
       .form__fn Нажимая кнопку отправить, вы соглашаетесь с&nbsp;
         a(href='#' target='_blank') политикой конфиденциальности
     block

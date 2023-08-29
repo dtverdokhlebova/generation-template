@@ -8,7 +8,7 @@
     @content;
   }
 }
-@mixin media-tablet-d-first {
+@mixin media-laptop-d-first {
   @media (max-width: ($mediaWidthLaptop - 1)) {
     @content;
   }

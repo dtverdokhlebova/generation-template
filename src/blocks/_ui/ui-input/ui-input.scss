@@ -1,19 +1,5 @@
 .ui-input {
-  &__controls {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 13px;
-      bottom: 13px;
-      left: 18px;
-      width: 1px;
-      background: $body-text;
-      transform: translateX(-18px);
-      opacity: 0;
-      transition: $transitionDuration;
-    }
-  }
+  position: relative;
   input {
     width: 100%;
     padding: 13px 18px;
@@ -33,6 +19,10 @@
     @include media-hover {
       border-color: #343434;
     }
+    &:focus,
+    &.filled {
+      border-color: #343434;
+    }
   }
   &__error {
     display: none;
@@ -43,19 +33,6 @@
     color: $error;
     &.active {
       display: block;
-    }
-  }
-  &.filled,
-  &.focus {
-    .ui-input__controls {
-      &::before {
-        transform: none;
-        opacity: 1;
-      }
-    }
-    input {
-      padding-left: 28px;
-      border-color: #343434;
     }
   }
   &--light {
@@ -69,10 +46,8 @@
       @include media-hover {
         border-color: #DEDEDE;
       }
-    }
-    &.filled,
-    &.focus {
-      input {
+      &:focus,
+      &.filled {
         border-color: #DEDEDE;
       }
     }

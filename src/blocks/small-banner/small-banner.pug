@@ -18,7 +18,9 @@ mixin small-banner(data, mods)
         span.small-banner__price-new.text-nowrap=data.priceNew
         if data.priceOld
           span.small-banner__price-old.text-nowrap=data.priceOld
-      +ui-button(data.btn, 'small-banner, --blue')(href='')
+      +ui-button('', 'small-banner, --blue')(href='')
+        span.ui-button__img: img(src='../../images/forefinger.gif' alt='')
+        | !{data.btn}
     .small-banner__pictures(class=data.picturesMods)
       each img in data.imgs
         .small-banner__img(class=img.mods data-parallax=img.parallax)

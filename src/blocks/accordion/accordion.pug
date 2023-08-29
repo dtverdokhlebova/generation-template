@@ -22,8 +22,8 @@ mixin accordions__item(head)
       .accordions__text
         -for(let i=1; i<3; i++)
           .accordions__text-box
-            +ui-h5('', '--bold').accordions__text-head
-              span.text-blue=`0${i}`
+            +ui-h6('', '--bold').accordions__text-head
+              span.accordions__text-count=`0${i}`
               |  Обсуждение технического задания, анализ конкурентов
             .accordions__text-main
               +ui-p1('Текст, текст, текст, текст,текст, текст,текст, тексттекст, текст', '--medium').text-grey

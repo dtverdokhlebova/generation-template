@@ -79,6 +79,7 @@
     height: 18px;
     color: $white;
     transition: $transitionDuration;
+    pointer-events: none;
     @include media-tablet-horizontal {
       top: 30px;
       right: auto;
@@ -102,6 +103,7 @@
       display: flex;
       padding: 45px 0;
       writing-mode: tb-rl;
+      cursor: pointer;
     }
   }
   &__body {
