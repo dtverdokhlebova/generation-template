@@ -207,6 +207,7 @@
       border-radius: 10px;
       overflow: hidden;
       transition: 0.6s;
+      isolation: isolate;
       @include media-hover {
         color: $white;
         text-decoration: none;

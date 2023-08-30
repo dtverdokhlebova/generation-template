@@ -132,7 +132,7 @@ block content
         +banner
     +section('--bg-grey, --mt0')
       .inner
-        +section-head('--max-w-xxxs')
+        +section-head('--max-w-xxxs, --mb-xl')
           +ui-h2('Особенности рекламы в&nbsp;социальных сетях:', 'section-head, --bold')
         +count-list(countListItems)
     +section
@@ -142,14 +142,14 @@ block content
           +ui-p1(`Для получения максимального результата, необходимо определиться
             с&nbsp;бизнес-целью рекламной кампании.
             Оставьте свои контакты и&nbsp;наши специалисты
-            свяжутся с&nbsp;вами!`, 'section-head').text-body
+            свяжутся с&nbsp;вами!`, 'section-head, --medium').text-body
         +goals(goalsItems)
     +section('--bg')
       +section('--ov-hidden')
         .inner
           +section-head('--max-w-xxs, --bb')
             +ui-h2('Цены за услуги', 'section-head, --bold')
-            +ui-p1('У нас индивидуальный подход к&nbsp;каждому проекту и&nbsp;нет&nbsp;фиксированных цен. Стоимость формируется из&nbsp;объема работ.', 'section-head').text-grey
+            +ui-p1('У нас индивидуальный подход к&nbsp;каждому проекту и&nbsp;нет&nbsp;фиксированных цен. Стоимость формируется из&nbsp;объема работ.', 'section-head, --medium').text-grey
 
           +tariffs(tariffsData)
 
@@ -158,7 +158,7 @@ block content
           +section('--grid')
             +section-head('section')
               +ui-h2('Дополнительные услуги', 'section-head, --bold')
-              +ui-p1('В нашем прайсе есть дополнительные услуги для&nbsp;вашего удобства', 'section-head').text-grey
+              +ui-p1('В нашем прайсе есть дополнительные услуги для&nbsp;вашего удобства', 'section-head, --medium').text-grey
             +section-main('section')
               +services-adt(ServicesAdtItems)#services-adt
             +ui-button('Смотреть все', 'section, --outline, --min-w, --px-xl')(onclick="toggleHidden(this, '#services-adt')" data-text-start='Смотреть все' data-text-end='Свернуть')
@@ -169,7 +169,7 @@ block content
       .inner
         +section-head('--t-flex, , --w-items-l')
           +ui-h2('Наша команда', 'section-head, --bold')
-          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head, --medium').text-body
         +team
     +section
       .inner
@@ -186,14 +186,14 @@ block content
         .inner
           +section-head('--t-flex, --bb')
             +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
-            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head, --medium').text-grey
           +stages
       +section('--ov-hidden')
         +section
           .inner
             +section-head('--t-flex').text-center.text-center--t-left
               +ui-h2('Наши клиенты', 'section-head, --bold')
-              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head, --medium').text-grey
             +clients#clients
             +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
               +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')

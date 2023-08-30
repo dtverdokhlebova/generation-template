@@ -10,12 +10,12 @@ mixin tariffs(data, dataSwitch, mods)
       allMods = allMods.trim()
     }
 
-  .tariffs(class=allMods)&attributes(attributes)
+  .tariffs.js-table(class=allMods data-media=(data.items.length > 2 ? '' : '767'))&attributes(attributes)
     .swiper
       .swiper-wrapper
         each item, index in data.items
-          .tariffs__item.swiper-slide
-            +ui-h4(item.title, 'tariffs, --bold')
+          .tariffs__item.swiper-slide.js-column
+            +ui-h4(item.title, 'tariffs, --bold').js-ceil
             .tariffs__main
               if item.descr
                 +ui-p1(item.descr, '--medium')
@@ -23,9 +23,11 @@ mixin tariffs(data, dataSwitch, mods)
                 .tariffs__props
                   each prop, inpdexProp in item.props
                     if inpdexProp > 2
-                      +tariffs__prop(prop.name, `0${inpdexProp+1}`)(style='display: none;' data-tariffs-prop-hidden='')
+                      .tariffs__prop(data-tariffs-prop-hidden='')
+                        +tariffs__prop-inner(prop.name, `0${inpdexProp+1}`).js-ceil
                     else
-                      +tariffs__prop(prop.name, `0${inpdexProp+1}`)
+                      .tariffs__prop
+                        +tariffs__prop-inner(prop.name, `0${inpdexProp+1}`).js-ceil
               if (item.props && item.props.length > 3)
                 .tariffs__more
                   +ui-p1('Показать еще', '--medium')
@@ -41,15 +43,16 @@ mixin tariffs(data, dataSwitch, mods)
                 else
                   +tariffs__price-val(item.priceBefore, item.price)
               +ui-button(item.button, 'tariffs, --white')(href='#')
-            .tariffs__footnote !{item.footnote}
+            if item.footnote
+              .tariffs__footnote !{item.footnote}
       if data.items.length > 2
         +ui-swiper-scrollbar('--light')
     block
 
-mixin tariffs__prop(name, index)
-  .tariffs__prop&attributes(attributes)
-    +ui-p1(name).tariffs__name
-    +ui-p1(index).tariffs__count
+mixin tariffs__prop-inner(name, index)
+  .tariffs__prop-inner&attributes(attributes)
+    +ui-p1(name, '--medium').tariffs__name
+    +ui-p1(index, '--medium').tariffs__count
 
 mixin tariffs__price-val(priceBefore, price)
   .tariffs__price-val.block-fade-in

@@ -135,6 +135,17 @@
       }
     }
   }
+  &--mb-xl {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+      @include media-tablet {
+        margin-bottom: 45px;
+      }
+      @include media-laptop {
+        margin-bottom: 70px;
+      }
+    }
+  }
   &--m-mb-l {
     &:not(:last-child) {
       @include media-tablet-d-first {

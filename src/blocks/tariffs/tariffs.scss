@@ -10,7 +10,7 @@
     border-radius: 10px;
     @include media-laptop {
       width: 415px;
-      padding: 30px 25px 35px;
+      padding: 30px 25px;
     }
   }
   &__ui-h4 {
@@ -20,10 +20,10 @@
     }
   }
   &__main {
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     color: $grey;
     @include media-laptop {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
   }
   &__props {
@@ -32,19 +32,24 @@
     }
   }
   &__prop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
     padding: 10px 0;
     border: 1px solid #282828;
-    border-width: 1px 0;
+    border-width: 0 0 1px;
     @include media-tablet {
       padding: 13px 0;
     }
     &:first-child {
       padding-top: 0;
       border-top: 0;
+    }
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
     }
   }
   &__more {
@@ -60,7 +65,7 @@
       align-items: center;
       flex-direction: row-reverse;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
     }
   }
   &__price {

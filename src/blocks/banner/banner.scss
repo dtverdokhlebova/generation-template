@@ -46,6 +46,7 @@
     color: $blue;
     @include media-laptop {
       font-size: 115%;
+      margin-left: 0.08em;
     }
   }
   &__pic {
@@ -155,6 +156,7 @@
     background: #EDEDED;
     border-radius: 4px;
     overflow: hidden;
+    isolation: isolate;
     @include media-laptop {
       max-width: 175px;
       height: 7px;

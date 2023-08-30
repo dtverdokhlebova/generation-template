@@ -67,6 +67,11 @@
             transform: scaleX(1);
           }
         }
+        &__pictures {
+          @include media-laptop {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -183,6 +188,8 @@
     }
     @include media-laptop {
       width: 380px;
+      opacity: 0;
+      transition: all $transitionDuration ease-in;
     }
     &-wrap {
       position: relative;

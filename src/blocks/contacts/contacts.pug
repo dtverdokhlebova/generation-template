@@ -43,7 +43,7 @@ mixin contacts(mods)
                 each item, index in sliderItems
                   .contacts-slider__item.swiper-slide(class=(index === 0 ? 'contacts-slider__item--active' : '') data-coords-lat=item.lat data-coords-lng=item.lng)
                     +ui-h6(item.title, 'contacts-slider, --bold')
-                    +ui-p1(item.descr, 'contacts-slider')
+                    +ui-p1(item.descr, 'contacts-slider, --medium')
                     .contacts-slider__bottom
                       a.contacts-slider__phone(href=`tel:${item.phoneLink}`)
                         +svg('icon_phone')

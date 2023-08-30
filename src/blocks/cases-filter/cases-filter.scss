@@ -4,7 +4,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
       @include media-laptop {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
     }
   }

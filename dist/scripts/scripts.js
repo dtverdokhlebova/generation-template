@@ -1951,10 +1951,26 @@ function swipe() {
 }
 function tariffs() {
   tariffsSlider();
+  window.addEventListener("load", function() {
+    tarifsHeight();
+  });
+  window.addEventListener("resize", function() {
+    tarifsHeight();
+  });
   window.tariffsPropsToggle = function(button) {
     $(button).toggleClass("ui-switch-button--active");
     $(button).parents(".tariffs__item").find("[ data-tariffs-prop-hidden]").slideToggle(() => ScrollTrigger.refresh(true));
   };
+}
+function tarifsHeight() {
+  const item = $(".js-table .tariffs__item");
+  const hiddenItem = item.find("[ data-tariffs-prop-hidden]");
+  const button = item.find(".ui-switch-button");
+  hiddenItem.css({ "display": "" });
+  button.removeClass("ui-switch-button--active");
+  autoHeightTable();
+  hiddenItem.css({ "display": "none" });
+  ScrollTrigger.refresh(true);
 }
 function tariffsSlider() {
   const blocks = document.querySelectorAll(".tariffs");
@@ -2044,6 +2060,33 @@ function smoothScroll() {
     });
   }
 }
+const autoHeightTable = () => {
+  const tables = [...document.querySelectorAll(".js-table")];
+  for (const table of tables) {
+    const columns = [...table.querySelectorAll(".js-column")];
+    const allCeils = [...table.querySelectorAll(".js-ceil")];
+    for (const ceil of allCeils) {
+      ceil.style.minHeight = "auto";
+    }
+    const media = table.dataset.media;
+    if (window.innerWidth > media) {
+      console.log(window.innerWidth);
+      const columnLength = [...columns[0].querySelectorAll(".js-ceil")].length;
+      for (let index = 0; index < columnLength; index++) {
+        const heights = [];
+        for (const column of columns) {
+          if ([...column.querySelectorAll(".js-ceil")][index])
+            heights.push([...column.querySelectorAll(".js-ceil")][index].offsetHeight);
+        }
+        const maxHeight = `${Math.max(...heights) + 1}px`;
+        for (const column of columns) {
+          if ([...column.querySelectorAll(".js-ceil")][index])
+            [...column.querySelectorAll(".js-ceil")][index].style.minHeight = maxHeight;
+        }
+      }
+    }
+  }
+};
 window.toggleHidden = function(button, parent) {
   if ($(button).data("expand") === "true") {
     $(button).data("expand", "false");

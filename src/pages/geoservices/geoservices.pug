@@ -44,7 +44,7 @@ block content
       .inner
         +section-head('--t-flex, --w-items-l')
           +ui-h2('Где клиенты могут вас найти', 'section-head, --bold')
-          +ui-p1('Мы проводим анализ ниши и&nbsp;прорабатываем только те&nbsp;запросы, которые могут привести вам клиента', 'section-head').text-body
+          +ui-p1('Мы проводим анализ ниши и&nbsp;прорабатываем только те&nbsp;запросы, которые могут привести вам клиента', 'section-head, --medium').text-body
         +services(servicesGeoItems, '--light')
     +section('--bg, --pt0')
       +section
@@ -57,7 +57,7 @@ block content
       .inner
         +section-head('--t-flex, , --w-items-l')
           +ui-h2('Наша команда', 'section-head, --bold')
-          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head, --medium').text-body
         +team
     +section
       .inner
@@ -74,14 +74,14 @@ block content
         .inner
           +section-head('--t-flex, --bb')
             +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
-            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head, --medium').text-grey
           +stages
       +section('--ov-hidden')
         +section
           .inner
             +section-head('--t-flex').text-center.text-center--t-left
               +ui-h2('Наши клиенты', 'section-head, --bold')
-              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами, --medium', 'section-head').text-grey
             +clients#clients
             +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
               +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')

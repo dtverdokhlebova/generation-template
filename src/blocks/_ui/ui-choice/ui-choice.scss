@@ -4,6 +4,8 @@
     position: absolute;
     width: 0;
     height: 0;
+    opacity: 0;
+    appearance: none;
     &:checked {
       ~ label {
         background: #343434;

@@ -29,8 +29,8 @@
     &-box {
       display: grid;
       gap: 25px;
-      padding: 16px 0;
-      border-top: 1px solid $elements-group;
+      padding: 15px 0;
+      border-top: 1px solid #282828;
       @include media-tablet {
         display: flex;
         justify-content: space-between;

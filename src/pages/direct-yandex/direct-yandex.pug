@@ -146,7 +146,7 @@ block content
           +ui-p1(`Это единая платформа размещения perfomance
             и&nbsp;имиджевой рекламы, позволяющая решать маркетинговые задачи
             на&nbsp;всех уровнях воронки, с&nbsp;аудиторией в&nbsp;десятки
-            миллионов уникальных пользователей каждый день`, 'section-head').text-body
+            миллионов уникальных пользователей каждый день`, 'section-head, --medium').text-body
         +goals(goalsItems, '--img-size-s')
 
     +section('--bg')
@@ -155,7 +155,7 @@ block content
           +section-head('--with-switch')
             +section-head('--max-w-xxs')
               +ui-h2('Цены за услуги', 'section-head, --bold')
-              +ui-p1('У нас индивидуальный подход (нет&nbsp;фиксированных цен), стоимость услуг формируется исходя из&nbsp;объема работ на&nbsp;проекте.', 'section-head').text-grey
+              +ui-p1('У нас индивидуальный подход (нет&nbsp;фиксированных цен), стоимость услуг формируется исходя из&nbsp;объема работ на&nbsp;проекте.', 'section-head, --medium').text-grey
             +ui-switch(switchTariffsData)
           +tariffs(tariffsData, switchTariffsData)
 
@@ -164,7 +164,7 @@ block content
           +section('--grid')
             +section-head('section')
               +ui-h2('Дополнительные услуги', 'section-head, --bold')
-              +ui-p1('В нашем прайсе есть дополнительные услуги для&nbsp;вашего удобства', 'section-head').text-grey
+              +ui-p1('В нашем прайсе есть дополнительные услуги для&nbsp;вашего удобства', 'section-head, --medium').text-grey
             +section-main('section')
               +services-adt(ServicesAdtItems)#services-adt
             +ui-button('Смотреть все', 'section, --outline, --min-w, --px-xl')(onclick="toggleHidden(this, '#services-adt')" data-text-start='Смотреть все' data-text-end='Свернуть')
@@ -173,7 +173,7 @@ block content
       .inner
         +section-head('--t-flex, , --w-items-l')
           +ui-h2('Наша команда', 'section-head, --bold')
-          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head').text-body
+          +ui-p1('В нашей команде работают настоящие профи с&nbsp;креативным подходом и&nbsp;богатым багажом знаний!', 'section-head, --medium').text-body
         +team
     +section
       .inner
@@ -190,14 +190,14 @@ block content
         .inner
           +section-head('--t-flex, --bb')
             +ui-h2('Этапы запуска вашего проекта', 'section-head, --bold')
-            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head').text-grey
+            +ui-p1('Каждый проект индивидуален, именно поэтому на&nbsp;каждом этапе мы учитываем все нюансы и&nbsp;ваши пожелания!', 'section-head, --medium').text-grey
           +stages
       +section('--ov-hidden')
         +section
           .inner
             +section-head('--t-flex').text-center.text-center--t-left
               +ui-h2('Наши клиенты', 'section-head, --bold')
-              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head').text-grey
+              +ui-p1('Мы работаем с&nbsp;крупными компаниями по&nbsp;всей России и&nbsp;за&nbsp;ее пределами', 'section-head, --medium').text-grey
             +clients#clients
             +section('--mt-xxxs', 'div').block-none.block-none--mobile.text-center
               +ui-button('Смотреть все', '--outline, --w100, --min-w, --px-xl')(onclick="toggleHidden(this, '#clients')" data-text-start='Смотреть все' data-text-end='Свернуть')

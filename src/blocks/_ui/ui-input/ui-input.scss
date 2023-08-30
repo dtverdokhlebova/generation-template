@@ -13,6 +13,7 @@
     border-radius: 10px;
     transition: $transitionDuration;
     outline: none;
+    appearance: none;
     &::placeholder {
       color: $body-text;
     }
