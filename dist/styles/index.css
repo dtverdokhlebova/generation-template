@@ -3373,10 +3373,10 @@ a:active {
 @media (min-width: 1024px) {
   .goals__item {
     width: 80px;
-    -webkit-transition: -webkit-box-flex var(--transition-duration) ease-in;
-    transition: -webkit-box-flex var(--transition-duration) ease-in;
-    transition: flex var(--transition-duration) ease-in;
-    transition: flex var(--transition-duration) ease-in, -webkit-box-flex var(--transition-duration) ease-in, -ms-flex var(--transition-duration) ease-in;
+    -webkit-transition: -webkit-box-flex 0.4s linear;
+    transition: -webkit-box-flex 0.4s linear;
+    transition: flex 0.4s linear;
+    transition: flex 0.4s linear, -webkit-box-flex 0.4s linear, -ms-flex 0.4s linear;
   }
 }
 
@@ -3448,7 +3448,13 @@ a:active {
   }
 }
 
-@media (min-width: 1359px) {
+@media (min-width: 1024px) {
+  .goals__item--active .goals__text {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
   .goals__item--active .goals__pictures {
     opacity: 1;
   }
@@ -3526,10 +3532,10 @@ a:active {
             transform: scaleX(0);
     -webkit-transform-origin: left;
             transform-origin: left;
-    -webkit-transition: -webkit-box-flex var(--transition-duration) ease-in;
-    transition: -webkit-box-flex var(--transition-duration) ease-in;
-    transition: flex var(--transition-duration) ease-in;
-    transition: flex var(--transition-duration) ease-in, -webkit-box-flex var(--transition-duration) ease-in, -ms-flex var(--transition-duration) ease-in;
+    -webkit-transition: -webkit-box-flex 0.4s linear;
+    transition: -webkit-box-flex 0.4s linear;
+    transition: flex 0.4s linear;
+    transition: flex 0.4s linear, -webkit-box-flex 0.4s linear, -ms-flex 0.4s linear;
   }
 }
 
@@ -3556,6 +3562,9 @@ a:active {
     position: relative;
     z-index: 1;
     min-width: 100vh;
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
 }
 
@@ -3615,15 +3624,15 @@ a:active {
             transform: translateY(-50%);
     width: 280px;
     margin: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s linear 0.2s;
+    transition: all 0.5s linear 0.2s;
   }
 }
 
 @media (min-width: 1359px) {
   .goals__pictures {
     width: 380px;
-    opacity: 0;
-    -webkit-transition: all var(--transition-duration) ease-in;
-    transition: all var(--transition-duration) ease-in;
   }
 }
 
@@ -4806,10 +4815,8 @@ a:active {
   margin-bottom: 25px;
 }
 
-@media (min-width: 1359px) {
-  .page-404__ui-p1 {
-    margin-bottom: 25px;
-  }
+.page-404__ui-p1 {
+  margin-bottom: 25px;
 }
 
 @media (min-width: 768px) {

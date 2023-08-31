@@ -16,7 +16,7 @@ mixin page-404(mods)
         span.text-nowrap не найдена
           span.text-blue  .
       +ui-p1('Возможно, вы ошиблись в&nbsp;адресе или&nbsp;мы&nbsp;удалили эту страницу', 'page-404, --medium, --l-size-l').text-body
-      .block-none.block-none--bf-laptop
+      .block-none
         +ui-button('На главную страницу', 'page-404, --px-xs, --blue')(href='main.html')
 
     .page-404__decor
@@ -79,8 +79,4 @@ mixin page-404(mods)
         </svg>
       .page-404__num
         img(src='../../images/page_404_num.svg', alt='')
-
-    .block-none.block-none--laptop
-      +ui-button('На главную страницу', 'page-404, --px-xs, --blue')(href='main.html')
-
     block

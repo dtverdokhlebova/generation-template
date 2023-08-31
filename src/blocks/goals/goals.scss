@@ -9,7 +9,7 @@
     grid-template-areas: 'main';
     @include media-tablet-horizontal {
       width: 80px;
-      transition: flex $transitionDuration ease-in;
+      transition: flex 0.4s linear;
     }
     @include media-laptop {
       width: 106px;
@@ -67,8 +67,13 @@
             transform: scaleX(1);
           }
         }
+        &__text {
+          @include media-tablet-horizontal {
+            opacity: 1;
+          }
+        }
         &__pictures {
-          @include media-laptop {
+          @include media-tablet-horizontal {
             opacity: 1;
           }
         }
@@ -125,7 +130,7 @@
       height: 100%;
       transform: scaleX(0);
       transform-origin: left;
-      transition: flex $transitionDuration ease-in;
+      transition: flex 0.4s linear;
     }
   }
   &__content {
@@ -144,6 +149,8 @@
       position: relative;
       z-index: 1;
       min-width: 100vh;
+      opacity: 0;
+      transition: all 0.4s;
     }
     &-wrapper {
       @include media-tablet-horizontal {
@@ -185,11 +192,11 @@
       transform: translateY(-50%);
       width: 280px;
       margin: 0;
+      opacity: 0;
+      transition: all 0.5s linear 0.2s;
     }
     @include media-laptop {
       width: 380px;
-      opacity: 0;
-      transition: all $transitionDuration ease-in;
     }
     &-wrap {
       position: relative;
