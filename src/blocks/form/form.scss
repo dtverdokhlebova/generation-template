@@ -17,6 +17,17 @@
       padding-bottom: 25px;
       border-bottom: 1px solid #232323;
     }
+    &--mb-s {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    &--bb0 {
+      &:not(:last-child) {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
   }
   &__ui-h6 {
     &:not(:last-child) {
@@ -44,6 +55,14 @@
     a {
       color: $bg-white;
     }
+    &--mt-l {
+      margin-top: 28px;
+    }
+  }
+  &--bg-none {
+    padding: 0;
+    background: none;
+    border-radius: 0;
   }
   &--light {
     @include media-tablet {

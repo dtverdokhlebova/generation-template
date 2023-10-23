@@ -1,0 +1,35 @@
+.request-call {
+  display: grid;
+  gap: 30px;
+  padding: 40px 18px;
+  background: $elements-group;
+  border-radius: 10px;
+  @include media-tablet {
+    grid-template-columns: 50% 1fr;
+    align-items: center;
+    padding: 45px 25px;
+  }
+  @include media-laptop {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 70px 55px 30px;
+  }
+  &__head {
+    @include media-tablet {
+      max-width: 380px;
+    }
+  }
+  &__ui-h2 {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+  &__form {
+    @include media-tablet {
+      max-width: 450px;
+    }
+    @include media-laptop {
+      width: 450px;
+    }
+  }
+}

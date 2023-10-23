@@ -1,0 +1,18 @@
+mixin request-call(mods)
+  -
+    const baseName = 'request-call'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .request-call(class=allMods)&attributes(attributes)
+    .request-call__head
+      +ui-h2('Отвечаем на ваши вопросы', 'request-call, --bold')
+      +ui-p1('Каждому нашему клиенту скидка 20%&nbsp;на&nbsp;консультацию в&nbsp;течение 30&nbsp;минут', 'request-call, --l-size-l, --medium').text-grey
+    +form('request-call, --bg-none', 'request-call')
+    block
