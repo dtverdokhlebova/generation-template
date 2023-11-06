@@ -367,6 +367,7 @@ function casesItem() {
   }
 }
 function goals() {
+  goalsSlider();
   $(".goals__button").on("click", function() {
     const itemName = ".goals__item";
     const classActive = "goals__item--active";
@@ -378,6 +379,41 @@ function goals() {
       $(this).parents(itemName).find(".goals__body").slideDown();
     }
   });
+}
+function goalsSlider() {
+  const slidersBlocks = document.querySelectorAll(".goals--slider");
+  for (const block of slidersBlocks) {
+    const slider = block.querySelector(".swiper");
+    const buttonNext = block.querySelector(".swiper-button-next");
+    const swiper = new Swiper(slider, {
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      watchSlidesProgress: true,
+      freeMode: true,
+      speed: 400,
+      enabled: false,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true
+      },
+      navigation: {
+        nextEl: buttonNext
+      },
+      breakpoints: {
+        1024: {
+          enabled: true
+        }
+      },
+      on: {
+        touchMove: function(swiper2) {
+          swiper2.update();
+        }
+      }
+    });
+    buttonNext.addEventListener("click", function() {
+      swiper.update();
+    });
+  }
 }
 function header() {
   burgerButton();
@@ -1555,7 +1591,6 @@ function page404() {
         this.turn = this.turn === "WHITE" ? "BLACK" : "WHITE";
         this.board.piecesUpdate(this.moveIndex);
         const state = this.moveResultState();
-        console.log(state);
         if (!state.moves && !state.captures) {
           alert(
             state.stalemate ? "Stalemate!" : `${this.turn === "WHITE" ? "Black" : "White"} Wins!`

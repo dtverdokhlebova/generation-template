@@ -13,3 +13,24 @@ mixin ui-swiper-scrollbar(mods)
   .ui-swiper-scrollbar(class=allMods)&attributes(attributes)
     .swiper-scrollbar
       block
+
+mixin ui-swiper-button(mods, prev)
+  -
+    const baseName = 'ui-swiper-button'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  if prev === true
+    .ui-swiper-button.swiper-button-prev(class=allMods)&attributes(attributes)
+      +svg('icon_swiper_prev')
+      block
+  else
+    .ui-swiper-button.swiper-button-next(class=allMods)&attributes(attributes)
+      +svg('icon_swiper_next')
+      block

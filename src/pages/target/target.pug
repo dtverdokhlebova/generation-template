@@ -26,8 +26,10 @@ block variables
 
   -
     const goalsItems ={
+      type: 'slider',
       items: [
-        { title: 'Лид-формы',
+        { mods: '--blue1',
+          title: 'Лид-формы',
           titleInner: 'Лид-формы',
           descr: 'Лид-формы — это инструмент для&nbsp;сбора контактных данных пользователей, заинтересованных в&nbsp;товаре или&nbsp;услуге.',
           imgs: [
@@ -35,21 +37,24 @@ block variables
             { src: 'goals_target_1_2.png', mods: 'goals__img--right-center goals__img--xxs' },
           ]
         },
-        { title: 'Реклама каталога',
+        { mods: '--blue2',
+          title: 'Реклама каталога',
           titleInner: 'Каталог',
           descr: 'Лид-формы&nbsp;&mdash; это инструмент для сбора контактных данных пользователей, заинтересованных в&nbsp;товаре или услуге.',
           imgs: [
             { src: 'goals_target_2_1.jpg', mods: 'goals__img--left-center goals__img--m' },
           ]
         },
-        { title: 'Реклама сообщества',
+        { mods: '--blue3',
+          title: 'Реклама сообщества',
           titleInner: 'Сообщество',
           descr: 'Лид-формы&nbsp;&mdash; это инструмент для сбора контактных данных пользователей, заинтересованных в&nbsp;товаре или услуге.',
           imgs: [
             { src: 'goals_target_3_1.jpg', mods: 'goals__img--left-center goals__img--m' },
           ]
         },
-        { title: 'Реклама сайта',
+        { mods: '--blue4',
+          title: 'Реклама сайта',
           titleInner: 'Сайт',
           descr: 'Лид-формы&nbsp;&mdash; это инструмент для сбора контактных данных пользователей, заинтересованных в&nbsp;товаре или услуге.',
           imgs: [
@@ -57,11 +62,39 @@ block variables
             { src: 'goals_target_4_1.jpg', mods: 'goals__img--left-center goals__img--m' },
           ]
         },
-        { title: 'Реклама приложения',
+        { mods: '--blue5',
+          title: 'Реклама приложения',
           titleInner: 'Приложение',
           descr: 'Лид-формы&nbsp;&mdash; это инструмент для сбора контактных данных пользователей, заинтересованных в&nbsp;товаре или услуге.',
           imgs: [
             { src: 'goals_target_5_1.jpg', mods: 'goals__img--left-center goals__img--xs' },
+          ]
+        },
+        { mods: '--blue6',
+          title: 'Реклама для маркетплейсов',
+          titleInner: 'Реклама для маркетплейсов',
+          descr: 'Реклама направлена на&nbsp;формирование определенного образа бренда в&nbsp;глазах потребителей с&nbsp;оплатой за&nbsp;CPM (показы). ',
+          textWrapperMods: 'goals__text-wrapper--max-w-xl',
+          imgs: [
+            { src: 'goals_target_6_1.jpg', mods: 'goals__img--right-center goals__img--xl goals__img--no-shadow goals__img--no-br' },
+          ]
+        },
+        { mods: '--black1',
+          title: 'Реклама Дзена',
+          titleInner: 'Реклама Дзена',
+          descr: 'С помощью VK&nbsp;Рекламы бизнес и&nbsp;авторы Дзена смогут продвигать статьи на&nbsp;платформе, увеличивать охват контента и&nbsp;привлекать потенциальных клиентов. ',
+          textWrapperMods: 'goals__text-wrapper--max-w-xl',
+          imgs: [
+            { src: 'goals_target_7_1.jpg', mods: 'goals__img--right-center goals__img--target-w-m goals__img--no-shadow goals__img--no-br' },
+          ]
+        },
+        { mods: '--black2',
+          title: 'Shoppable Ads',
+          titleInner: 'Shoppable Ads',
+          descr: 'Это брендформанс-формат, который объединяет в&nbsp;себе видео и&nbsp;каталог товаров. Во&nbsp;время просмотра рекламного видеоролика пользователи видят также кликабельную карусель товаров и&nbsp;могут сразу перейти к&nbsp;покупкам.',
+          textWrapperMods: 'goals__text-wrapper--max-w-xl',
+          imgs: [
+            { src: 'goals_target_8_1.jpg', mods: 'goals__img--right-center goals__img--target-w-m goals__img--no-br' },
           ]
         },
       ]
@@ -135,7 +168,7 @@ block content
         +section-head('--max-w-xxxs, --mb-xl')
           +ui-h2('Особенности рекламы в&nbsp;социальных сетях:', 'section-head, --bold')
         +count-list(countListItems)
-    +section
+    +section('--ov-hidden')
       .inner
         +section-head('--max-w-xxs')
           +ui-h2('Формат и цели', 'section-head, --bold')

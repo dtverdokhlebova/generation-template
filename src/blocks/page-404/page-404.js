@@ -989,7 +989,6 @@ export default function page404() {
         this.turn = this.turn === 'WHITE' ? 'BLACK' : 'WHITE'
         this.board.piecesUpdate(this.moveIndex)
         const state = this.moveResultState()
-        console.log(state)
         if (!state.moves && !state.captures) {
           alert(
             state.stalemate

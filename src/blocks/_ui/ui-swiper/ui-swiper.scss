@@ -28,4 +28,30 @@
       }
     }
   }
+  &-button {
+    --swiper-navigation-size: 60px;
+
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-shrink: 0;
+    width: var(--swiper-navigation-size);
+    height: var(--swiper-navigation-size);
+    margin: 0;
+    color: $bg-white;
+    background: $blue;
+    border-radius: 50%;
+    transition: 0.3s;
+    &::after {
+      display: none;
+    }
+    .svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
