@@ -1989,8 +1989,13 @@ function tariffs() {
   window.addEventListener("load", function() {
     tarifsHeight();
   });
+  let widthStart = window.innerWidth;
   window.addEventListener("resize", function() {
-    tarifsHeight();
+    let widthEnd = window.innerWidth;
+    if (widthStart != widthEnd) {
+      widthStart = window.innerWidth;
+      tarifsHeight();
+    }
   });
   window.tariffsPropsToggle = function(button) {
     $(button).toggleClass("ui-switch-button--active");
@@ -2105,7 +2110,6 @@ const autoHeightTable = () => {
     }
     const media = table.dataset.media;
     if (window.innerWidth > media) {
-      console.log(window.innerWidth);
       const columnLength = [...columns[0].querySelectorAll(".js-ceil")].length;
       for (let index = 0; index < columnLength; index++) {
         const heights = [];

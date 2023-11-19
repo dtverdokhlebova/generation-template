@@ -82,7 +82,6 @@ export const autoHeightTable = () => {
     const media = table.dataset.media
 
     if (window.innerWidth > media) {
-      console.log(window.innerWidth);
       const columnLength = [...columns[0].querySelectorAll('.js-ceil')].length
 
       for (let index = 0; index < columnLength; index++) {

@@ -7,8 +7,13 @@ export default function tariffs() {
     tarifsHeight()
   })
 
+  let widthStart = window.innerWidth
   window.addEventListener('resize', function () {
-    tarifsHeight()
+    let widthEnd = window.innerWidth
+    if(widthStart != widthEnd){
+      widthStart = window.innerWidth
+      tarifsHeight()
+    }
   })
 
   window.tariffsPropsToggle = function (button) {
